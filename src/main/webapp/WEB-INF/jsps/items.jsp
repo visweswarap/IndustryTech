@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: vish
-  Date: 06/07/22
-  Time: 10:35 AM
+  Date: 07/07/22
+  Time: 10:16 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,7 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-  <h1>Successfully dispatched</h1>
-  <div><h2>${message}</h2></div>
+    <!-- List of courses -->
 </body>
 </html>
