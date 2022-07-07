@@ -1,5 +1,7 @@
 package com.application.cources;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,7 @@ public class CoursesController {
     String getAllCourses(ModelMap modelMap){
         modelMap.addAttribute("message", "");
         return "items";
+
     }
 
     @GetMapping("/new")
@@ -27,4 +30,6 @@ public class CoursesController {
         modelMap.addAttribute("message", "");
         return "success";
     }
+
+
 }

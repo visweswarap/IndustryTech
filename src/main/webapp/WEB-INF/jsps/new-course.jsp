@@ -30,7 +30,7 @@
 </head>
 <body>
 <div>
-<div style="background-image: url('./images/Capture2.PNG'); width: 850px; height: 500px; border: 2px solid; color: pink;
+<div style="background-image: url('./images/170667a.jpg'); width: 850px; height: 500px; border: 2px solid; color: pink;
  margin-top: 10%;" >
 
 </div>
@@ -38,7 +38,7 @@
     <div class="register">
         <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out;">
             Submit Courses Details</h2>
-    <form id="register" action=/courses/new" method="get" style="width: 200px;">
+    <form id="register" action="/courses/new" method="get" style="width: 200px;">
        <label style="font-weight: 800;font-size: 17px;">Course Name :</label>
         <br>
         <input id="CorseName" type="text"  name="Cname" placeholder="Enter Course Name;"
@@ -68,9 +68,11 @@
                 border: 2px solid #4CAF50;padding: 10px 16px;text-align: center;margin: 4px 2px;
                 transition-duration: 0.4s;cursor: pointer;border-radius: 8px;">
         <br><br>
-        <input type="submit" value="List Of Courses" class="button" style=" background-color: white; color: black;
+        <form action="/courses/all">
+        <input  type="submit" value="List Of Courses" class="button"  style=" background-color: white; color: black;
                 border: 2px solid #008CBA;padding: 10px 16px;text-align: center;margin: 4px 2px;
                 transition-duration: 0.4s;cursor: pointer;border-radius: 8px;">
+        </form>
     </form>
     </div>
 </div>
