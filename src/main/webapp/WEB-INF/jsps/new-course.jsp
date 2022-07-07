@@ -24,6 +24,7 @@
             height: 80%;
             margin-left: 80%;
             margin-top: -122%;
+            color: white;
         }
     </style>
 </head>
