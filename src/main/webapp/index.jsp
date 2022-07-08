@@ -56,7 +56,7 @@
         <a href="#" class="button">Login</a>
         <a href="#" class="button">Sign Up</a>
     </div>
-    <div style="width: 500px; height: 300px; border: 2px solid; color: pink; margin-left: 5%;margin-top: 15%;">
+    <div style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 15%;">
         <h2 class="offer" > Courses Offered </h2>
         <ol>
             <li>C & C++ -Languages</li>
