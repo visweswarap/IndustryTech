@@ -68,7 +68,7 @@
                 border: 2px solid #4CAF50;padding: 10px 16px;text-align: center;margin: 4px 2px;
                 transition-duration: 0.4s;cursor: pointer;border-radius: 8px;">
         <br><br>
-        <form action="/courses/all">
+        <form action="${pageContext.request.contextPath}/courses/all">
         <input  type="submit" value="List Of Courses" class="button"  style=" background-color: white; color: black;
                 border: 2px solid #008CBA;padding: 10px 16px;text-align: center;margin: 4px 2px;
                 transition-duration: 0.4s;cursor: pointer;border-radius: 8px;">

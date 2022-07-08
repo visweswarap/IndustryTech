@@ -1,4 +1,4 @@
-package com.application.cources.models;
+package com.industrytech.cources.models;
 
 public class Course {
 
