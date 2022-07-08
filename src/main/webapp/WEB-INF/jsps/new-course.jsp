@@ -57,7 +57,7 @@
         <div class="register">
             <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out;">
                 Submit Courses Details</h2>
-            <form id="register" action="/courses/new" method="get" style="width: 200px;">
+            <form id="register" action="${pageContext.request.contextPath}/courses/new" method="get" style="width: 200px;">
                 <label style="font-size: 17px;">Course Name :</label>
                 <br>
                 <input id="CorseName" type="text" name="Cname" placeholder="Enter Course Name;"
