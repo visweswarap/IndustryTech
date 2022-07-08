@@ -28,6 +28,10 @@ public class CoursesController {
         modelMap.addAttribute("message", "");
         return "success";
     }
-
+   @GetMapping("/home")
+    String courseHome(ModelMap modelMap){
+        modelMap.addAttribute("message", "");
+        return "index";
+    }
 
 }

@@ -17,16 +17,17 @@
         }
 
         div.register {
-            background-color: rgba(0, 0, 0, 0.5);
-            width: 100%;
+            background-color: white;
+            width: 80%;
             font-size: 18px;
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-            height: 80%;
-            margin-left: 80%;
-            margin-top: -122%;
-            color: white;
+            height: 65%;
+            margin-left: 115%;
+            margin-top: -115%;
+            color: #800080;
+            display: inline-block;
         }
 
         .button {
@@ -39,52 +40,52 @@
             transition-duration: 0.4s;
             cursor: pointer;
             border-radius: 4px;
+
         }
         .button:hover {
             background-color: #008CBA;
             color: white;
             border-radius: 4px;
         }
+        .input{
+            width: 200px;
+            margin: 1px;
+            border: none;
+            border-bottom: 2px solid #8842d5;
+        }
     </style>
 </head>
-<body>
+<body style="background-image: url('../images/3145.webp');">
 <div>
-    <div style="background-image: url('../images/170667a.jpg'); width: 850px; height: 500px; border: 2px solid; color: pink;
- margin-top: 10%;">
+    <div style="background-image: url('../images/612x612.jpg'); width: 1070px; height: 500px; border: 2px solid; color: pink;
+ margin-top: 10%;background-repeat: round;">
 
     </div>
     <div class="main">
         <div class="register">
             <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out;">
                 Submit Courses Details</h2>
-            <form id="register" action="${pageContext.request.contextPath}/courses/new" method="get" style="width: 200px;">
+            <br>
+            <form id="register" action="${pageContext.request.contextPath}/courses/new" method="get"
+                  style="width: 200px; margin-left: 10%">
                 <label style="font-size: 17px;">Course Name :</label>
                 <br>
-                <input id="CorseName" type="text" name="Cname" placeholder="Enter Course Name;"
-                       style="width: 300px;margin: 2px;padding: 3px; border-radius: 8px;">
+                <input class="input" type="text" name="Cname" placeholder="Enter Course Name;" >
                 <br><br>
-                <label style="font-size: 17px;">Course Duration :</label>
+                <label  style="font-size: 17px;">Course Duration :</label>
                 <br>
-                <input id="Duration" type="text" name="Duration" placeholder="Duration In Days"
-                       style="width: 300px;margin: 2px;padding: 3px;border-radius: 8px;">
+                <input class="input" type="text" name="Duration" placeholder="Duration In Days">
                 <br><br>
                 <label style="font-size: 17px;">Course Fee :</label>
                 <br>
-                <input id="Cfee" type="text" name="Cfee" placeholder="Fee in Rs : "
-                       style="width: 300px;margin: 2px;padding: 3px;border-radius: 8px;">
+                <input class="input" type="text" name="Cfee" placeholder="Fee in Rs : " >
                 <br><br>
-                <label style="font-size: 17px;">Created By :</label>
-                <br>
-                <input id="create" type="number" name="create" placeholder="Created By <Name>"
-                       style="width: 300px;margin: 2px;padding: 3px;border-radius: 8px;">
-                <br><br>
-                <label style="font-size: 17px;">Modified By :</label>
-                <br>
-                <input id="modify" type="text" name="modify" placeholder="Modified By<Name>"
-                       style="width: 300px;margin: 2px;padding: 3px;border-radius: 8px;">
-                <br><br>
+                <div style="margin-top: 10%">
                 <input type="submit" value="Submit Details" class="button">
-                <input type="button" value="List Of Courses" class="button" onclick="loadAllCourses()">
+                </div>
+                <div style="margin-left: 100%; margin-top: -24%;">
+                <input type="button" value="List Of Courses" class="button" onclick="loadAllCourses()" >
+                </div>
             </form>
         </div>
     </div>
