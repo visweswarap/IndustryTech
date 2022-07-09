@@ -71,8 +71,9 @@
         </ol>
     </div>
     <div style="width: 800px; height: 300px; border: 2px solid; color: pink; margin-left: 40%;margin-top: -20.15%;">
-        <div style="width:120px; height: 120px; border: 2px solid; color: pink; margin-top: 3%;margin-left: 1%;
-                background-image: url('./images/vish.webp');background-repeat: no-repeat;">
+        <div style="width:120px; height: 120px; border: 2px solid; color: pink; margin-top: 3%;margin-left: 1%;">
+
+            <img src="./images/vish.webp" width="100%">
         </div>
         <div style="width:120px; height: 120px; border: 2px solid; color: pink; margin-top: 1.5%;margin-left: 1% ">
         </div>

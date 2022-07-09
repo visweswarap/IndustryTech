@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-    <jsp:include page="header.jsp" />
+    <jsp:include page="header.jsp"/>
     <style type="text/css">
         div.main {
             width: 500px;
@@ -23,10 +23,8 @@
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-            height: 65%;
-            margin-left: 115%;
-            margin-top: -115%;
-            color: #800080;
+            height: 60%;
+              color: #800080;
             display: inline-block;
         }
 
@@ -42,12 +40,14 @@
             border-radius: 4px;
 
         }
+
         .button:hover {
             background-color: #008CBA;
             color: white;
             border-radius: 4px;
         }
-        .input{
+
+        .input {
             width: 200px;
             margin: 1px;
             border: none;
@@ -57,11 +57,7 @@
 </head>
 <body style="background-image: url('../images/3145.webp');">
 <div>
-    <div style="background-image: url('../images/612x612.jpg'); width: 1070px; height: 500px; border: 2px solid; color: pink;
- margin-top: 10%;background-repeat: round;">
-
-    </div>
-    <div class="main">
+       <div class="main">
         <div class="register">
             <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out;">
                 Submit Courses Details</h2>
@@ -70,21 +66,21 @@
                   style="width: 200px; margin-left: 10%">
                 <label style="font-size: 17px;">Course Name :</label>
                 <br>
-                <input class="input" type="text" name="Cname" placeholder="Enter Course Name;" >
+                <input class="input" type="text" name="Cname" placeholder="Enter Course Name;">
                 <br><br>
-                <label  style="font-size: 17px;">Course Duration :</label>
+                <label style="font-size: 17px;">Course Duration :</label>
                 <br>
                 <input class="input" type="text" name="Duration" placeholder="Duration In Days">
                 <br><br>
                 <label style="font-size: 17px;">Course Fee :</label>
                 <br>
-                <input class="input" type="text" name="Cfee" placeholder="Fee in Rs : " >
+                <input class="input" type="text" name="Cfee" placeholder="Fee in Rs : ">
                 <br><br>
                 <div style="margin-top: 10%">
-                <input type="submit" value="Submit Details" class="button">
+                    <input type="submit" value="Submit Details" class="button">
                 </div>
-                <div style="margin-left: 100%; margin-top: -24%;">
-                <input type="button" value="List Of Courses" class="button" onclick="loadAllCourses()" >
+                <div style="margin-left: 90%; margin-top: -24%;">
+                    <input type="button" value="List Of Courses" class="button" onclick="loadAllCourses()">
                 </div>
             </form>
         </div>
@@ -92,7 +88,7 @@
 </div>
 <script>
 
-    function loadAllCourses(){
+    function loadAllCourses() {
         window.location = "./all";
     }
 </script>
