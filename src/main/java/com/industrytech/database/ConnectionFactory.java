@@ -4,15 +4,14 @@ import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 
-@Component
 public class ConnectionFactory {
 
-    String dbUser = "";
-    String dbPass = "";
-    String url = "";
-    String dbName = "";
+    String dbUser = "postgres";
+    String dbPass = "postgres";
+    String url = "127.0.0.1:5432";
+    String dbName = "IndustryTech";
 
-    public static Connection produce(){
+    public static Connection produce() {
         // register driver
         // get connection by driver manager
         // return connection

@@ -62,19 +62,19 @@
             <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out;">
                 Submit Courses Details</h2>
             <br>
-            <form id="register" action="${pageContext.request.contextPath}/courses/new" method="get"
+            <form id="register" action="${pageContext.request.contextPath}/courses/insert" method="POST"
                   style="width: 200px; margin-left: 10%">
                 <label style="font-size: 17px;">Course Name :</label>
                 <br>
-                <input class="input" type="text" name="Cname" placeholder="Enter Course Name;">
+                <input class="input" type="text" name="name" placeholder="Enter Course Name">
                 <br><br>
                 <label style="font-size: 17px;">Course Duration :</label>
                 <br>
-                <input class="input" type="text" name="Duration" placeholder="Duration In Days">
+                <input class="input" type="text" name="duration" placeholder="Duration In Days">
                 <br><br>
                 <label style="font-size: 17px;">Course Fee :</label>
                 <br>
-                <input class="input" type="text" name="Cfee" placeholder="Fee in Rs : ">
+                <input class="input" type="text" name="fee" placeholder="Fee in Rs ">
                 <br><br>
                 <div style="margin-top: 10%">
                     <input type="submit" value="Submit Details" class="button">
