@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -25,19 +26,16 @@ public class CoursesController {
     CourseDao courseDao;
 
     @GetMapping("/all")
-    String getAllCourses(ModelMap modelMap ) throws SQLException {
+    String getAllCourses(ModelMap modelMap) throws SQLException {
         List<Course> courses = null;
         courses = courseDao.getAll();
         modelMap.addAttribute("courses", courses);
-        modelMap.addAttribute("courses1", courses);
-        modelMap.addAttribute("courses2", courses);
-        modelMap.addAttribute("courses3", courses);
         return "items";
 
     }
 
     @GetMapping("/new")
-    String newCourse(ModelMap modelMap){
+    String newCourse(ModelMap modelMap) {
         modelMap.addAttribute("message", "");
         return "new-course";
     }
@@ -51,15 +49,16 @@ public class CoursesController {
         course.setCreatedDate(new Date());
         course.setModifiedDate(new Date());
         boolean isSaved = courseDao.save(course);
-        if(isSaved){
+        if (isSaved) {
             modelMap.addAttribute("message", "SUCCESS");
         } else {
             modelMap.addAttribute("message", "FAILED");
         }
         return "success";
     }
-   @GetMapping("/home")
-    String courseHome(ModelMap modelMap){
+
+    @GetMapping("/home")
+    String courseHome(ModelMap modelMap) {
         modelMap.addAttribute("message", "");
         return "index";
     }

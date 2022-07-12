@@ -27,7 +27,7 @@ public class Course {
         this.type = type;
     }
 
-    public Course(){
+    public Course() {
 
     }
 
@@ -74,6 +74,7 @@ public class Course {
     }
 
     public void setId(int id) {
+        ;
         this.id = id;
     }
 
@@ -112,6 +113,7 @@ public class Course {
     public Timestamp createDate() {
         return null;
     }
+
 
     public enum CourseType {
         PROGRAMMING,

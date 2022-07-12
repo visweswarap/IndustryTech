@@ -11,27 +11,26 @@ import java.util.List;
 
 
 @Repository
-public class CourseDaoImpl implements CourseDao{
+public class CourseDaoImpl implements CourseDao {
 
     @Override
     public List<Course> getAll() throws SQLException {
         Connection connection = ConnectionFactory.produce();
         String get = "SELECT * FROM technologies.course;";
         PreparedStatement pstmt = connection.prepareStatement(get);
-        ResultSet rs = pstmt.executeQuery(get);
+        ResultSet rs = pstmt.executeQuery();
         List<Course> courses = new ArrayList<>();
         Course course = null;
-        while(rs.next())
-        {
+        while (rs.next()) {
             course = new Course();
             course.setId(rs.getInt("id"));
             course.setName(rs.getString("name"));
-            duration = rs.getInt(3);
-            fees = rs.getDouble(4);
-            cdate = rs.getDate(5);
-            mdate = rs.getDate(6);
-            cname  = rs.getString(7);
-            mname  = rs.getString(8);
+            course.setDuration(rs.getInt("duration"));
+            course.setFee(rs.getDouble("fees"));
+            course.setCreatedDate(rs.getDate("created_date"));
+            course.setModifiedDate(rs.getDate("modified_date"));
+            course.setCreatedBy(rs.getString("created_by"));
+            course.setModifiedBy(rs.getString("modified_by"));
             courses.add(course);
         }
 
@@ -57,11 +56,11 @@ public class CourseDaoImpl implements CourseDao{
             pstmt.setString(8, course.getModifiedBy());
             pstmt.executeUpdate();
             return true;
-        } catch (SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
         } finally {
-            if(connection != null)
+            if (connection != null)
                 connection.close();
             if (pstmt != null)
                 pstmt.close();
@@ -69,9 +68,10 @@ public class CourseDaoImpl implements CourseDao{
     }
 
     public static void main(String[] args) throws SQLException {
-        Connection connection=ConnectionFactory.produce();
+        Connection connection = ConnectionFactory.produce();
         System.out.println(connection);
     }
+
     @Override
     public boolean saveMany(List<Course> courses) {
         return false;
