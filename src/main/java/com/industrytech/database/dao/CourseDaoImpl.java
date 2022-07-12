@@ -41,22 +41,20 @@ public class CourseDaoImpl implements CourseDao {
          }catch (Exception ignored){
 
          }finally {
-             connection.close();
              pstmt.close();
+             connection.close();
          }
         return null;
     }
 
     @Override
     public boolean save(Course course) throws SQLException {
-        // Your logic here
         Connection connection = null;
-        String insert = "INSERT INTO technologies.course VALUES(?,?,?,?,?,?,?,?);";
+        String insert = "INSERT INTO technologies.course VALUES(?, ?, ?, ?, ?, ?, ?);";
         PreparedStatement pstmt = null;
         try {
             connection = ConnectionFactory.produce();
             pstmt = connection.prepareStatement(insert);
-            pstmt.setInt(1, course.getId());
             pstmt.setString(2, course.getName());
             pstmt.setInt(3, course.getDuration());
             pstmt.setDouble(4, course.getFee());
@@ -70,10 +68,10 @@ public class CourseDaoImpl implements CourseDao {
             ex.printStackTrace();
             return false;
         } finally {
-            if (connection != null)
-                connection.close();
             if (pstmt != null)
                 pstmt.close();
+            if (connection != null)
+                connection.close();
         }
     }
 
