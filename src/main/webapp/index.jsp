@@ -40,6 +40,10 @@
             background: #1abc9c;
             margin-top: 1px;
         }
+        .header{
+            text-align: center;
+            margin: 1em 0 0.5em 0;
+        }
 
     </style>
 </head>
@@ -48,6 +52,7 @@
     <div style="width: 190px; height: 200px; border: 2px solid; color: pink; margin-left: 5%;margin-top: 5%;">
     </div>
     <div style="width: 600px; height: 50px; border: 2px solid; color: pink; margin-top: -13.5%; margin-left: 18%">
+        <h1 class="header">It Industrial Training</h1>
     </div>
     <div style="width:900px; height: 140px; border: 2px solid; color: pink; margin-top: 0.5%;margin-left: 18% ">
 
@@ -72,7 +77,6 @@
     </div>
     <div style="width: 800px; height: 300px; border: 2px solid; color: pink; margin-left: 40%;margin-top: -20.15%;">
         <div style="width:120px; height: 120px; border: 2px solid; color: pink; margin-top: 3%;margin-left: 1%;">
-
             <img src="./images/vish.webp" width="100%">
         </div>
         <div style="width:120px; height: 120px; border: 2px solid; color: pink; margin-top: 1.5%;margin-left: 1% ">
