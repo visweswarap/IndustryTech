@@ -13,8 +13,36 @@
 <head>
     <title>Title</title>
     <style type="text/css">
+        .header{
+            overflow: hidden;
+            background-color: blue;
+            border-radius: 5px;
+           }
+        .header a{
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+        .header a:hover {
+            background: linear-gradient(130deg,dodgerblue 60%, #ffed4b 60%);
+            color: black;
+        }
+
+        .header a.active {
+            background-color: dodgerblue ;
+            color: white;
+        }
+
+        .header-right {
+            float: right;
+        }
         table {
-            width: 800px;
+            width: 100%;
             border-collapse: collapse;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -25,12 +53,8 @@
             padding: 8px;
             background-color: purple;
             color: #fff;
-        }
-
-        th {
             text-align: center;
         }
-
         tr:hover {
             background-color: cornflowerblue;
         }
@@ -44,13 +68,13 @@
     </style>
 </head>
 <div class="header">
-    <a href="#default" class="logo">IT Industrial Technologies</a>
+    <a class="logo">IT Industrial Technologies</a>
     <div class="header-right">
-        <a class="active" href="#home" onclick="loadCoursesHome()">Home</a>
+        <a class="active" href="#home" onclick="loadAllCourses()">Home</a>
     </div>
 </div>
 
-<body style="background-image: url('../images/175640.jpg')">
+<body style=" background: linear-gradient(130deg, #ffed4b 60%, #20B2AA 60%);">
 <table style="border: 1px solid black; width: 90%;margin-left: 5%">
     <tr>
         <th>Course -ID</th>
@@ -77,12 +101,18 @@
                 <input type="button" value="update" style="line-height: 1; display: inline-block; font-size: 0.8rem;
                         border-radius: 5px;color: #fff;padding: 4px;background-color: #06998b;">
                 <input type="button" value="delete" style="line-height: 1; display: inline-block; font-size: 0.8rem;
-                        border-radius: 5px;color: #fff;padding: 4px;background-color: #06998b;">
+                        border-radius: 5px;color: #fff;padding: 4px;background-color: darkred;">
             </td>
         </tr>
 
     </c:forEach>
 </table>
+<script>
+function loadAllCourses()
+{
+    window.location = "./all";
+}
+</script>
 
 </body>
 </html>

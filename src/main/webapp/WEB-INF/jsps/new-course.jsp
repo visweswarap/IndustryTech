@@ -23,8 +23,8 @@
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-            height: 85%;
-              color: #800080;
+            height: 60%;
+            color: #800080;
             display: inline-block;
         }
 
@@ -57,7 +57,7 @@
 </head>
 <body style="background-image: url('../images/3145.webp');">
 <div>
-       <div class="main">
+    <div class="main">
         <div class="register">
             <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out;">
                 Submit Courses Details</h2>
