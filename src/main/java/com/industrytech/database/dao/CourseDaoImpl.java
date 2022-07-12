@@ -51,8 +51,8 @@ public class CourseDaoImpl implements CourseDao{
         pstmt.setDouble(4,course.getFee());
         pstmt.setTimestamp(5,course.createDate());
         pstmt.setTimestamp(6,course.createDate());
-        pstmt.setString(7,course.getCname());
-        pstmt.setString(8,course.getMname());
+        pstmt.setString(7,course.getCreatedBy());
+        pstmt.setString(8,course.getModifiedBy());
         pstmt.executeUpdate();
         connection.close();
         pstmt.close();

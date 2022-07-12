@@ -64,9 +64,6 @@
             <br>
             <form id="register" action="${pageContext.request.contextPath}/courses/insert" method="POST"
                   style="width: 200px; margin-left: 10%">
-                <label style="font-size: 17px;">Course ID :</label>
-                <input class="input" type="text" name="id" placeholder="Enter Corse ID">
-                <br><br>
                 <label style="font-size: 17px;">Course Name :</label>
                 <br>
                 <input class="input" type="text" name="name" placeholder="Enter Course Name">
@@ -78,14 +75,7 @@
                 <label style="font-size: 17px;">Course Fee :</label>
                 <br>
                 <input class="input" type="text" name="fee" placeholder="Enter Fee Amount ">
-                <label style="font-size: 17px;">Created By </label>
                 <br>
-                <input class="input" type="text" name="cname" placeholder="Created By name ">
-                <br><br>
-                <label style="font-size: 17px;">Modify By </label>
-                <input class="input" type="text" name="mname" placeholder="Created By name ">
-                <br><br>
-                <br><br>
                 <div style="margin-top: 10%">
                     <input type="submit" value="Submit Details" class="button">
                 </div>

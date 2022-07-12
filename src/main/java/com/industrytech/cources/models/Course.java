@@ -6,40 +6,60 @@ import java.util.Date;
 public class Course {
 
     private int id;
-    private String name,cname,mname;
-    private Date cdate,mdate;
+    private String name;
+    private String createdBy;
+    private String modifiedBy;
+    private Date createdDate;
+    private Date modifiedDate;
     private int duration;
-   private Double fee;
+    private Double fee;
 
-    public Course(int id, String name,int duration,Double fees,  Date cdate, Date mdate,String cname, String mname) {
+    public Course(int id, String name, int duration, Double fee, Date createdDate, Date modifiedDate, String createdBy, String modifiedBy) {
         this.id = id;
         this.name = name;
-        this.cname = cname;
-        this.mname = mname;
-        this.cdate = cdate;
-        this.mdate = mdate;
+        this.createdBy = createdBy;
+        this.modifiedBy = modifiedBy;
+        this.createdDate = createdDate;
+        this.modifiedDate = modifiedDate;
         this.duration = duration;
-        this.fee = fees;
+        this.fee = fee;
     }
 
-    public String getCname() {
-        return cname;
+    public String getCreatedBy() {
+        return createdBy;
     }
 
-    public void setCname(String cname) {
-        this.cname = cname;
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
     }
 
-    public String getMname() {
-        return mname;
+    public String getModifiedBy() {
+        return modifiedBy;
     }
 
-    public void setMname(String mname) {
-        this.mname = mname;
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
     }
 
+    public Date getCreatedDate() {
+        return createdDate;
+    }
 
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
 
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
+    }
+
+    public void setFee(Double fee) {
+        this.fee = fee;
+    }
 
     private CourseType type = CourseType.PROGRAMMING;
 
@@ -83,11 +103,11 @@ public class Course {
         this.type = type;
     }
 
-      public Timestamp createDate() {
+    public Timestamp createDate() {
         return null;
     }
 
-    public enum CourseType{
+    public enum CourseType {
         PROGRAMMING,
         TESTING,
         PROJECT_TRAINING

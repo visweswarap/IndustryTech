@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -42,9 +43,18 @@ public class CoursesController {
 
     @PostMapping("/insert")
     String saveCourse(ModelMap modelMap, @ModelAttribute Course course) throws SQLException {
-        modelMap.addAttribute("message", "");
+        System.out.println("Inserting details...");
         course.setType(Course.CourseType.PROGRAMMING);
-        courseDao.save(course);
+        course.setCreatedBy("Admin");
+        course.setModifiedBy("Admin");
+        course.setCreatedDate(new Date());
+        course.setModifiedDate(new Date());
+        boolean isSaved = courseDao.save(course);
+        if(isSaved){
+            modelMap.addAttribute("message", "SUCCESS");
+        } else {
+            modelMap.addAttribute("message", "FAILED");
+        }
         return "success";
     }
    @GetMapping("/home")
