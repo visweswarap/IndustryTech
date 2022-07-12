@@ -15,26 +15,36 @@ public class CourseDaoImpl implements CourseDao {
 
     @Override
     public List<Course> getAll() throws SQLException {
-        Connection connection = ConnectionFactory.produce();
+        Connection connection = null;
+        PreparedStatement pstmt=null;
         String get = "SELECT * FROM technologies.course;";
-        PreparedStatement pstmt = connection.prepareStatement(get);
-        ResultSet rs = pstmt.executeQuery();
-        List<Course> courses = new ArrayList<>();
-        Course course = null;
-        while (rs.next()) {
-            course = new Course();
-            course.setId(rs.getInt("id"));
-            course.setName(rs.getString("name"));
-            course.setDuration(rs.getInt("duration"));
-            course.setFee(rs.getDouble("fees"));
-            course.setCreatedDate(rs.getDate("created_date"));
-            course.setModifiedDate(rs.getDate("modified_date"));
-            course.setCreatedBy(rs.getString("created_by"));
-            course.setModifiedBy(rs.getString("modified_by"));
-            courses.add(course);
-        }
+         try {
+             connection = ConnectionFactory.produce();
+             pstmt = connection.prepareStatement(get);
+             ResultSet rs = pstmt.executeQuery();
+             List<Course> courses = new ArrayList<>();
+             Course course = null;
+             while (rs.next()) {
+                 course = new Course();
+                 course.setId(rs.getInt("id"));
+                 course.setName(rs.getString("name"));
+                 course.setDuration(rs.getInt("duration"));
+                 course.setFee(rs.getDouble("fees"));
+                 course.setCreatedDate(rs.getDate("created_date"));
+                 course.setModifiedDate(rs.getDate("modified_date"));
+                 course.setCreatedBy(rs.getString("created_by"));
+                 course.setModifiedBy(rs.getString("modified_by"));
+                 courses.add(course);
+             }
 
-        return courses;
+             return courses;
+         }catch (Exception ignored){
+
+         }finally {
+             connection.close();
+             pstmt.close();
+         }
+        return null;
     }
 
     @Override
