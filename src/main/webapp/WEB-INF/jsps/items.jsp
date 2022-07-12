@@ -31,13 +31,13 @@
         <th style="background-color: darkgrey; color: #8c3b32">Modified - By</th>
         <th style="background-color: darkgrey; color: #8c3b32">Update/Delete</th>
     </tr>
-    <c:forEach var="s" items="${student}">
+    <c:forEach var="c" items="${courses}">
         <tr style="border: 1px solid black;">
             <td style="border: 1px solid black;
            border-radius: 5px;
            background-color: silver;
            text-align: center;
-           padding: 6px 6px 6px 6px;">${s.name}</td>
+           padding: 6px 6px 6px 6px;">${c.name}</td>
             <td style="border: 1px solid black; border-radius: 5px;  background-color: silver; text-align: center;"></td>
             <td style="border: 1px solid black; border-radius: 3px;  background-color: silver; text-align: center;"></td>
             <td style="border: 1px solid black; border-radius: 3px; background-color: silver; text-align: center;"></td>

@@ -1,4 +1,4 @@
-package com.industrytech.cources;
+package com.industrytech.cources.controller;
 
 import com.industrytech.cources.models.Course;
 import com.industrytech.database.dao.CourseDao;
@@ -26,11 +26,12 @@ public class CoursesController {
 
     @GetMapping("/all")
     String getAllCourses(ModelMap modelMap ) throws SQLException {
-        modelMap.addAttribute("message", "");
-        List<Course> course = null;
-        CourseDaoImpl daocourse = new CourseDaoImpl();
-        course = daocourse.getAll();
-
+        List<Course> courses = null;
+        courses = courseDao.getAll();
+        modelMap.addAttribute("courses", courses);
+        modelMap.addAttribute("courses1", courses);
+        modelMap.addAttribute("courses2", courses);
+        modelMap.addAttribute("courses3", courses);
         return "items";
 
     }

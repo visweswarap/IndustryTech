@@ -7,22 +7,28 @@ public class Course {
 
     private int id;
     private String name;
+    private int duration;
+    private Double fee;
+
     private String createdBy;
     private String modifiedBy;
     private Date createdDate;
     private Date modifiedDate;
-    private int duration;
-    private Double fee;
 
-    public Course(int id, String name, int duration, Double fee, Date createdDate, Date modifiedDate, String createdBy, String modifiedBy) {
+    public Course(int id, String name, int duration, Double fee, String createdBy, String modifiedBy, Date createdDate, Date modifiedDate, CourseType type) {
         this.id = id;
         this.name = name;
+        this.duration = duration;
+        this.fee = fee;
         this.createdBy = createdBy;
         this.modifiedBy = modifiedBy;
         this.createdDate = createdDate;
         this.modifiedDate = modifiedDate;
-        this.duration = duration;
-        this.fee = fee;
+        this.type = type;
+    }
+
+    public Course(){
+
     }
 
     public String getCreatedBy() {
