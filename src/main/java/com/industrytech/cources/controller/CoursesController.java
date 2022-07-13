@@ -2,18 +2,12 @@ package com.industrytech.cources.controller;
 
 import com.industrytech.cources.models.Course;
 import com.industrytech.database.dao.CourseDao;
-import com.industrytech.database.dao.CourseDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -24,7 +18,7 @@ public class CoursesController {
     @Autowired
     CourseDao courseDao;
 
-    @GetMapping("/all")
+    @GetMapping("/")
     String getAllCourses(ModelMap modelMap) throws SQLException {
         List<Course> courses = null;
         courses = courseDao.getAll();
@@ -40,7 +34,7 @@ public class CoursesController {
     }
 
     @PostMapping("/insert")
-    String saveCourse(ModelMap modelMap, @ModelAttribute Course course) throws SQLException {
+    @ResponseBody String saveCourse(ModelMap modelMap, @ModelAttribute Course course) throws SQLException {
         System.out.println("Inserting details...");
         course.setType(Course.CourseType.PROGRAMMING);
         course.setCreatedBy("Admin");

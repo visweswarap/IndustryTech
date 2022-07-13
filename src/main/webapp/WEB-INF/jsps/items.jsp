@@ -12,6 +12,7 @@
 <html>
 <head>
     <title>Title</title>
+    <jsp:include page="header.jsp" />
     <style type="text/css">
         .header{
             overflow: hidden;
@@ -77,15 +78,11 @@
 <body style=" background: linear-gradient(130deg, #ffed4b 60%, #20B2AA 60%);">
 <table style="border: 1px solid black; width: 90%;margin-left: 5%">
     <tr>
-        <th>Course -ID</th>
-        <th>Course - Name</th>
-        <th>Course - Duration</th>
-        <th>Course- Fees</th>
-        <th>Created - Date</th>
-        <th>Modified - Date</th>
-        <th>Created - By</th>
-        <th>Modified - By</th>
-        <th>Update/Delete</th>
+        <th>Course ID</th>
+        <th>Name</th>
+        <th>Duration</th>
+        <th>Fees</th>
+        <th>Actions</th>
     </tr>
     <c:forEach var="c" items="${courses}">
         <tr style="border: 1px solid black;">
@@ -93,10 +90,6 @@
             <td>${c.name}</td>
             <td>${c.duration}</td>
             <td>${c.fee}</td>
-            <td>${c.createdDate}</td>
-            <td>${c.modifiedDate}</td>
-            <td>${c.createdBy}</td>
-            <td>${c.modifiedBy}</td>
             <td style=>
                 <input type="button" value="update" style="line-height: 1; display: inline-block; font-size: 0.8rem;
                         border-radius: 5px;color: #fff;padding: 4px;background-color: #06998b;">
@@ -107,6 +100,7 @@
 
     </c:forEach>
 </table>
+<jsp:include page="new-course.jsp"/>
 <script>
 function loadAllCourses()
 {

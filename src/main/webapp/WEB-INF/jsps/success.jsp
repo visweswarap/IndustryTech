@@ -8,7 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Success</title>
+    <jsp:include page="header.jsp"/>
 </head>
 <body>
   <h1>Successfully dispatched</h1>

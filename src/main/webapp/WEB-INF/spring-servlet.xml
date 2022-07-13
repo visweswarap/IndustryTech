@@ -12,6 +12,7 @@
     <context:component-scan base-package="com.industrytech" />
     <mvc:annotation-driven />
     <mvc:resources mapping="/images/**" location="/images/"/>
+    <mvc:resources mapping="/scripts/**" location="/WEB-INF/scripts/"/>
 
     <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <beans:property name="prefix" value="/WEB-INF/jsps/" />

@@ -27,26 +27,6 @@
             color: #800080;
             display: inline-block;
         }
-
-        .button {
-            background-color: white;
-            color: black;
-            border: 2px solid #008CBA;
-            padding: 10px 16px;
-            text-align: center;
-            margin: 4px 2px;
-            transition-duration: 0.4s;
-            cursor: pointer;
-            border-radius: 4px;
-
-        }
-
-        .button:hover {
-            background-color: #008CBA;
-            color: white;
-            border-radius: 4px;
-        }
-
         .input {
             width: 200px;
             margin: 1px;
@@ -62,8 +42,9 @@
             <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out;">
                 Submit Courses Details</h2>
             <br>
-            <form id="register" action="${pageContext.request.contextPath}/courses/insert" method="POST"
-                  style="width: 200px; margin-left: 10%">
+            <form id="newCourse" action="" style="width: 200px; margin-left: 10%">
+                <div style="display: none; color: green;" id="saveSuccess"><p>Saved Successfully</p></div>
+                <div style="display: none; color: green;" id="saveFailed"><p>Save failed! Try again.</p></div>
                 <label style="font-size: 17px;">Course Name :</label>
                 <br>
                 <input class="input" type="text" name="name" placeholder="Enter Course Name">
@@ -77,7 +58,7 @@
                 <input class="input" type="text" name="fee" placeholder="Enter Fee Amount ">
                 <br>
                 <div style="margin-top: 10%">
-                    <input type="submit" value="Submit Details" class="button">
+                    <input type="button" value="Submit Details" onclick="saveCourse()" class="button">
                 </div>
                 <div style="margin-left: 90%; margin-top: -24%;">
                     <input type="button" value="List Of Courses" class="button" onclick="loadAllCourses()">
@@ -87,6 +68,26 @@
     </div>
 </div>
 <script>
+
+    function saveCourse(){
+
+        $.ajax({
+            url : "./insert",
+            type: "POST",
+            data : $("#newCourse").serialize(),
+            success: function(data, textStatus, jqXHR)
+            {
+                console.log("Success");
+                console.log("data");
+                $("#saveSuccess").show(500);
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+                $("#saveFailed").show(500);
+                console.error("Failure");
+            }
+        });
+    }
 
     function loadAllCourses() {
         window.location = "./all";
