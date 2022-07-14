@@ -12,14 +12,15 @@
 <html>
 <head>
     <title>Title</title>
-    <jsp:include page="header.jsp" />
+    <jsp:include page="header.jsp"/>
     <style type="text/css">
-        .header{
+        .header {
             overflow: hidden;
             background-color: blue;
             border-radius: 5px;
-           }
-        .header a{
+        }
+
+        .header a {
             float: left;
             color: white;
             text-align: center;
@@ -29,19 +30,21 @@
             line-height: 25px;
             border-radius: 4px;
         }
+
         .header a:hover {
-            background: linear-gradient(130deg,dodgerblue 60%, #ffed4b 60%);
+            background: linear-gradient(130deg, dodgerblue 60%, #ffed4b 60%);
             color: black;
         }
 
         .header a.active {
-            background-color: dodgerblue ;
+            background-color: dodgerblue;
             color: white;
         }
 
         .header-right {
             float: right;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -56,6 +59,7 @@
             color: #fff;
             text-align: center;
         }
+
         tr:hover {
             background-color: cornflowerblue;
         }
@@ -76,36 +80,41 @@
 </div>
 
 <body style=" background: linear-gradient(130deg, #ffed4b 60%, #20B2AA 60%);">
-<table style="border: 1px solid black; width: 90%;margin-left: 5%">
-    <tr>
-        <th>Course ID</th>
-        <th>Name</th>
-        <th>Duration</th>
-        <th>Fees</th>
-        <th>Actions</th>
-    </tr>
-    <c:forEach var="c" items="${courses}">
-        <tr style="border: 1px solid black;">
-            <td>${c.id}</td>
-            <td>${c.name}</td>
-            <td>${c.duration}</td>
-            <td>${c.fee}</td>
-            <td style=>
-                <input type="button" value="update" style="line-height: 1; display: inline-block; font-size: 0.8rem;
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+    <div>
+        <table style="border: 1px solid black; width: 90%;margin-left: 2em; margin-top: 5em">
+            <tr>
+                <th>Course ID</th>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Fees</th>
+                <th>Actions</th>
+            </tr>
+            <c:forEach var="c" items="${courses}">
+                <tr style="border: 1px solid black;">
+                    <td>${c.id}</td>
+                    <td>${c.name}</td>
+                    <td>${c.duration}</td>
+                    <td>${c.fee}</td>
+                    <td style=>
+                        <input type="button" value="update" style="line-height: 1; display: inline-block; font-size: 0.8rem;
                         border-radius: 5px;color: #fff;padding: 4px;background-color: #06998b;">
-                <input type="button" value="delete" style="line-height: 1; display: inline-block; font-size: 0.8rem;
+                        <input type="button" value="delete" style="line-height: 1; display: inline-block; font-size: 0.8rem;
                         border-radius: 5px;color: #fff;padding: 4px;background-color: darkred;">
-            </td>
-        </tr>
+                    </td>
+                </tr>
 
-    </c:forEach>
-</table>
-<jsp:include page="new-course.jsp"/>
+            </c:forEach>
+        </table>
+    </div>
+    <div>
+        <jsp:include page="new-course.jsp"/>
+    </div>
+</div>
 <script>
-function loadAllCourses()
-{
-    window.location = "./all";
-}
+    function loadAllCourses() {
+        window.location = "./all";
+    }
 </script>
 
 </body>

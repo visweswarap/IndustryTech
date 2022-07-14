@@ -6,36 +6,30 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-    <jsp:include page="header.jsp"/>
-    <style type="text/css">
-        div.main {
-            width: 500px;
-            margin: 100px auto 0px auto;
-        }
+<style type="text/css">
+    div.main {
+        width: 500px;
+        margin: 50px auto 0px auto;
+    }
 
-        div.register {
-            background-color: white;
-            width: 80%;
-            font-size: 18px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-            height: 60%;
-            color: #800080;
-            display: inline-block;
-        }
-        .input {
-            width: 200px;
-            margin: 1px;
-            border: none;
-            border-bottom: 2px solid #8842d5;
-        }
-    </style>
-</head>
-<body style="background-image: url('../images/3145.webp');">
+    div.register {
+        background-color: white;
+        width: 80%;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        color: #800080;
+        display: inline-block;
+    }
+
+    .input {
+        width: 200px;
+        margin: 1px;
+        border: none;
+        border-bottom: 2px solid #8842d5;
+    }
+</style>
 <div>
     <div class="main">
         <div class="register">
@@ -69,20 +63,18 @@
 </div>
 <script>
 
-    function saveCourse(){
+    function saveCourse() {
 
         $.ajax({
-            url : "./insert",
+            url: "./insert",
             type: "POST",
-            data : $("#newCourse").serialize(),
-            success: function(data, textStatus, jqXHR)
-            {
+            data: $("#newCourse").serialize(),
+            success: function (data, textStatus, jqXHR) {
                 console.log("Success");
                 console.log("data");
                 $("#saveSuccess").show(500);
             },
-            error: function (jqXHR, textStatus, errorThrown)
-            {
+            error: function (jqXHR, textStatus, errorThrown) {
                 $("#saveFailed").show(500);
                 console.error("Failure");
             }
@@ -93,5 +85,3 @@
         window.location = "./all";
     }
 </script>
-</body>
-</html>
