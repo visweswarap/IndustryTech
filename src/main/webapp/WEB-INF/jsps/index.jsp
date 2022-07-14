@@ -4,23 +4,6 @@
 <head>
     <title>JSP - Hello World</title>
     <style>
-        .button {
-            font-family: sans-serif;
-            text-transform: uppercase;
-            font-size: 12px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            text-shadow: rgba(0, 0, 0, 0.30) 0 -1.25px 0;
-            display: inline-block;
-            vertical-align: middle;
-            zoom: 1;
-            margin-top: 5px;
-            border: 1px solid #13619f;
-            background: #2371b7;
-            padding: 9px 12px;
-            border-radius: 5px;
-        }
         ol{
             background:  initial;
             padding: 10px;
@@ -59,8 +42,8 @@
 
     </div>
     <div style="width:150px; height: 40px; border: 2px solid;color: cornflowerblue; margin-top: -13.5%;margin-left: 90% ">
-        <a href="#" class="button">Login</a>
-        <a href="#" class="button">Sign Up</a>
+        <a href="#" class="button" style="padding: 8px 8px">Login</a>
+        <a href="#" class="button" style="padding:8px 6px">Sign Up</a>
     </div>
     <div style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 15%;">
         <h2 class="offer" > Courses Offered </h2>

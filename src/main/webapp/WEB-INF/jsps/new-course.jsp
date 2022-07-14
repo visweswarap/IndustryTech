@@ -14,13 +14,16 @@
 
     div.register {
         background-color: white;
-        width: 80%;
+        width: 75%;
         font-size: 18px;
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
         color: #800080;
         display: inline-block;
+        margin-top: 1.5em;
+        margin-left: 6em;
+        height: 75%;
     }
 
     .input {
@@ -54,10 +57,7 @@
                 <div style="margin-top: 10%">
                     <input type="button" value="Submit Details" onclick="saveCourse()" class="button">
                 </div>
-                <div style="margin-left: 90%; margin-top: -24%;">
-                    <input type="button" value="List Of Courses" class="button" onclick="loadAllCourses()">
-                </div>
-            </form>
+                </form>
         </div>
     </div>
 </div>

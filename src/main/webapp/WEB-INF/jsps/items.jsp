@@ -14,37 +14,6 @@
     <title>Title</title>
     <jsp:include page="header.jsp"/>
     <style type="text/css">
-        .header {
-            overflow: hidden;
-            background-color: blue;
-            border-radius: 5px;
-        }
-
-        .header a {
-            float: left;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 18px;
-            line-height: 25px;
-            border-radius: 4px;
-        }
-
-        .header a:hover {
-            background: linear-gradient(130deg, dodgerblue 60%, #ffed4b 60%);
-            color: black;
-        }
-
-        .header a.active {
-            background-color: dodgerblue;
-            color: white;
-        }
-
-        .header-right {
-            float: right;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
@@ -72,17 +41,11 @@
         }
     </style>
 </head>
-<div class="header">
-    <a class="logo">IT Industrial Technologies</a>
-    <div class="header-right">
-        <a class="active" href="#home" onclick="loadAllCourses()">Home</a>
-    </div>
-</div>
 
 <body style=" background: linear-gradient(130deg, #ffed4b 60%, #20B2AA 60%);">
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
     <div>
-        <table style="border: 1px solid black; width: 90%;margin-left: 2em; margin-top: 5em">
+        <table style="border: 1px solid black; width: 90%;margin-left: 5em; margin-top: 5em">
             <tr>
                 <th>Course ID</th>
                 <th>Name</th>
@@ -97,10 +60,8 @@
                     <td>${c.duration}</td>
                     <td>${c.fee}</td>
                     <td style=>
-                        <input type="button" value="update" style="line-height: 1; display: inline-block; font-size: 0.8rem;
-                        border-radius: 5px;color: #fff;padding: 4px;background-color: #06998b;">
-                        <input type="button" value="delete" style="line-height: 1; display: inline-block; font-size: 0.8rem;
-                        border-radius: 5px;color: #fff;padding: 4px;background-color: darkred;">
+                        <input type="button" value="update" >
+                        <input type="button" value="delete">
                     </td>
                 </tr>
 
