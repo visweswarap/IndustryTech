@@ -46,6 +46,7 @@
         }
 
     </style>
+    <jsp:include page="header.jsp" />
 </head>
 <body style="background-image: url('./images/collection1.jpg')">
 <div>
