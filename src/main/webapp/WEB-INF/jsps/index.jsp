@@ -25,6 +25,7 @@
         }
     </style>
     <jsp:include page="header.jsp" />
+    <link rel="stylesheet" type="text/css" href="../styles/header.css">
 </head>
 <body style="background-image: url('./images/collection1.jpg')">
 <div>

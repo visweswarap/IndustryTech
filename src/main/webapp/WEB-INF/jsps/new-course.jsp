@@ -23,8 +23,7 @@
         display: inline-block;
         margin-top: 1.5em;
         margin-left: 6em;
-        height: 75%;
-    }
+        }
 
     .input {
         width: 200px;
