@@ -53,34 +53,25 @@
             <label style="font-size: 17px;">Pass Word :</label>
             <br>
             <input class="input" type="password" name="password" placeholder="Enter a Valid Pass Word">
-            <br> <br>
+            <br> <br><br>
             <input type="button" value="Login Now" id="#linkLogin" class="button">
 
         </form>
         <div class="login-signup" style="margin-top: 15px">
-       <span class="text">Not a Member? <a  href="#" class="signup-text" id="linkCreateAccount"> Signup Now</a>
-       </span>
+            <span class="text">New Member?</span>
+            <button  class="button" onclick="signUp()">Sign Up</button>
         </div>
     </div>
 </div>
 
 <script type="application/javascript">
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const loginForm = document.querySelector("#loginForm");
-            const createAccount = document.querySelector("#signupForm");
+       function signUp()
+       {
+          document.querySelector(".login").style.cssText ="display: none;";
+          document.querySelector(".signup").style.cssText ="display: inline-block;";
 
-            document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-                e.preventDefault();
-                loginForm.classList.add("signupForm");
-                createAccount.classList.remove("signupForm");
-            });
-            document.querySelector("#linkLogin").addEventListener("click", e => {
-                e.preventDefault();
-                loginForm.classList.remove("signupForm");
-                createAccount.classList.add("form--hidden");
-            });
-        });
+       }
 
 
 </script>
