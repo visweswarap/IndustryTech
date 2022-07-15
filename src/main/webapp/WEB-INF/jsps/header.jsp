@@ -7,10 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="../styles/header.css">
-</head>
+<link rel="stylesheet" type="text/css" href="styles/header.css">
 <div class="header">
     <div class="dropdown">
         <nav>
@@ -38,5 +35,4 @@
         </nav>
     </div>
 </div>
-<script src="../scripts/web/jquery-3.6.0.min.js"></script>
-</html>>
+<script src="scripts/web/jquery-3.6.0.min.js"></script>
