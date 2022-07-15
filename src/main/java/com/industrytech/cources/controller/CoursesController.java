@@ -18,19 +18,13 @@ public class CoursesController {
     @Autowired
     CourseDao courseDao;
 
-    @GetMapping("/")
+    @GetMapping("")
     String getAllCourses(ModelMap modelMap) throws SQLException {
         List<Course> courses = null;
         courses = courseDao.getAll();
         modelMap.addAttribute("courses", courses);
         return "items";
 
-    }
-
-    @GetMapping("/new")
-    String newCourse(ModelMap modelMap) {
-        modelMap.addAttribute("message", "");
-        return "new-course";
     }
 
     @PostMapping("/insert")

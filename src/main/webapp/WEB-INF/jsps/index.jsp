@@ -23,11 +23,6 @@
             background: #1abc9c;
             margin-top: 1px;
         }
-        .header{
-            text-align: center;
-            margin: 1em 0 0.5em 0;
-        }
-
     </style>
     <jsp:include page="header.jsp" />
 </head>

@@ -107,7 +107,7 @@
         <nav>
             <ul>
                 <li><a class="active-header" href="#" style="margin-right: 40em;">IT Industry Technologies</a></li>
-                <li><a class="active" href="#">Courses</a>
+                <li><a class="active" href="${pageContext.request.contextPath}/courses/">Courses</a>
                     <ul>
                         <li><a href="#">C </a></li>
                         <li><a href="#">C++</a></li>
