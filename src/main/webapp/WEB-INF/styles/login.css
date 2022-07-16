@@ -30,11 +30,7 @@ div.signup {
     height: 20em;
     display: none;
 }
-div.login-signup{
-    margin-left: 10em;
-    margin-top: 17em;
-}
-.input {
+    .input {
     width: 20em;
     margin: 1px;
     border: none;

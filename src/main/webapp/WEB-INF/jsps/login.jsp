@@ -40,8 +40,10 @@
             <br> <br>
             <input type="button" value="Signup" id="createAccount" onclick="signup()" class="button">
         </form>
-        <span class="text">Already Member? <a  href="#" class="Login-text" id="linkLogin"> Login Now</a>
-       </span>
+        <div class="login-Signup" style=" margin-left: 10em; margin-top: -2.5em;">
+            <span class="text">Already Member?</span>
+            <button  class="button" onclick="loginForm()">Login</button>
+        </div>
     </div>
     <div class="login">
         <h2 class="h2"> Login</h2>
@@ -49,7 +51,7 @@
             <label style="font-size: 17px;">E Mail :</label>
             <br>
             <input class="input" type="email" name="email" placeholder="Enter a Valid Email">
-            <br>
+            <br> <br>
             <label style="font-size: 17px;">Pass Word :</label>
             <br>
             <input class="input" type="password" name="password" placeholder="Enter a Valid Pass Word">
@@ -57,7 +59,7 @@
             <input type="button" value="Login Now" id="#linkLogin" class="button">
 
         </form>
-        <div class="login-signup" style="margin-top: 15px">
+        <div class="login-Signup" style=" margin-left: 10em; margin-top: -2.5em;">
             <span class="text">New Member?</span>
             <button  class="button" onclick="signUp()">Sign Up</button>
         </div>
@@ -72,7 +74,12 @@
           document.querySelector(".signup").style.cssText ="display: inline-block;";
 
        }
+       function loginForm()
+       {
+           document.querySelector(".login").style.cssText ="display: inline-block;";
+           document.querySelector(".signup").style.cssText ="display: none;";
 
+       }
 
 </script>
 </body>
