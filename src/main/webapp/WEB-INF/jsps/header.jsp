@@ -12,7 +12,7 @@
     <div class="dropdown">
         <nav>
             <ul>
-                <li><a class="active-header" href="#" style="margin-right: 40em;">IT Industry Technologies</a></li>
+                <li><a class="active-header" href="/index" style="margin-right: 40em;">IT Industry Technologies</a></li>
                 <li><a class="active" href="${pageContext.request.contextPath}/courses/">Courses</a>
                     <ul>
                         <li><a href="#">C </a></li>
@@ -30,8 +30,7 @@
                     </ul>
                 </li>
                 <li><a class="active" href="#">Projects</a></li>
-                <li><a class="active" href="#">Home</a></li>
-            </ul>
+               </ul>
         </nav>
     </div>
 </div>

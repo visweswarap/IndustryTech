@@ -23,7 +23,7 @@ public class CoursesController {
         List<Course> courses = null;
         courses = courseDao.getAll();
         modelMap.addAttribute("courses", courses);
-        return "items";
+        return "courses";
 
     }
 
