@@ -15,7 +15,8 @@ import com.industrytech.users.model.User;
 @RequestMapping("/user")
 public class UserController {
 
-
+    @Autowired
+    UserDao userDao;
 
     @GetMapping("")
     String getUser(ModelMap modelMap) throws SQLException {
