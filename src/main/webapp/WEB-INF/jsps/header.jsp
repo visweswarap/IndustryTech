@@ -30,7 +30,7 @@
                     </ul>
                 </li>
                 <li><a class="active" style="margin-right: 22em;" href="#">Projects</a></li>
-                <li><a class="active" href="user" style="margin-left: 4em">Login</a></li>
+                <li><a class="active" href="user" style="float: right">Login</a></li>
                </ul>
         </nav>
     </div>

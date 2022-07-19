@@ -25,8 +25,8 @@
             <div style="display: none; color: green;" id="saveFailed"><p>Save failed! Try again.</p></div>
             <label style="font-size: 17px;">Name:</label>
             <br>
-            <input class="input" type="text" name="first_name" placeholder="First Name">
-            <input class="input" type="text" name="last_name" placeholder="Last Name">
+            <input class="input" type="text" name="firstname" placeholder="First Name">
+            <input class="input" type="text" name="lastname" placeholder="Last Name">
             <br>
             <label style="font-size: 17px;">E-Mail :</label>
             <br>
@@ -42,7 +42,7 @@
             <br>
             <label style="font-size: 17px;">Mobile Number :</label>
             <br>
-            <input class="input" type="text" name="mobile_number" placeholder="Enter a Valid Mobile Number">
+            <input class="input" type="text" name="mobile" placeholder="Enter a Valid Mobile Number">
             <br> <br>
             <input type="button" value="Save" id="createAccount" onclick="saveLogin()" class="button">
         </form>

@@ -9,7 +9,6 @@ public class User {
     String email;
     String mobile;
     String password;
-    String conformPassword;
     Date createdDate;
     Date modifiedDate;
 
@@ -61,15 +60,7 @@ public class User {
         this.password = password;
     }
 
-    public String getConformPassword() {
-        return conformPassword;
-    }
-
-    public void setConformpassword(String conformPassword) {
-        this.conformPassword = conformPassword;
-    }
-
-    public Date getCtreateddate() {
+       public Date getCtreateddate() {
         return createdDate;
     }
 
