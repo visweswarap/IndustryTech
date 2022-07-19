@@ -1,11 +1,17 @@
 package com.industrytech.users.model;
 
+import java.util.Date;
+
 public class User {
     int id;
     String firstname;
     String lastname;
     String email;
     String mobile;
+    String password;
+    String conformPassword;
+    Date createdDate;
+    Date modifiedDate;
 
     public int getId() {
         return id;
@@ -46,5 +52,38 @@ public class User {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getConformPassword() {
+        return conformPassword;
+    }
+
+    public void setConformpassword(String conformPassword) {
+        this.conformPassword = conformPassword;
+    }
+
+    public Date getCtreateddate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
+    }
+
 
 }

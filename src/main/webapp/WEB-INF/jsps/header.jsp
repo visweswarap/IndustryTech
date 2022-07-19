@@ -12,8 +12,8 @@
     <div class="dropdown">
         <nav>
             <ul>
-                <li><a class="active-header" href="/index" style="margin-right: 40em;">IT Industry Technologies</a></li>
-                <li><a class="active" href="${pageContext.request.contextPath}/courses/">Courses</a>
+                <li><a class="active-header" style="margin-right: 6em; margin-left: 5em" href="${pageContext.request.contextPath}/courses/home" >IT Industry Technologies</a></li>
+                <li><a class="active" style="margin-right: 5em;" href="${pageContext.request.contextPath}/courses">Courses</a>
                     <ul>
                         <li><a href="#">C </a></li>
                         <li><a href="#">C++</a></li>
@@ -21,7 +21,7 @@
                         <li><a href="#">AdvanceJava</a></li>
                     </ul>
                 </li>
-                <li><a class="active" href="#">Batches</a>
+                <li><a class="active" style="margin-right: 5em;" href="#">Batches</a>
                     <ul>
                         <li><a href="#">10.00 AM</a></li>
                         <li><a href="#">11.00 AM</a></li>
@@ -29,7 +29,8 @@
                         <li><a href="#">06.00 PM</a></li>
                     </ul>
                 </li>
-                <li><a class="active" href="#">Projects</a></li>
+                <li><a class="active" style="margin-right: 22em;" href="#">Projects</a></li>
+                <li><a class="active" href="user" style="margin-left: 4em">Login</a></li>
                </ul>
         </nav>
     </div>

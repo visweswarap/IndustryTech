@@ -10,12 +10,14 @@ import java.sql.SQLException;
 
 @Repository
 public class UserDaoImpl implements UserDao{
+
+
     @Override
     public boolean save(User user) throws SQLException {
         Connection connection = null;
-        String insert = "INSERT INTO technologies.user" +
-                "(first_name, last_name, email, mobile_number)" +
-                " VALUES(?, ?, ?,?);";
+        String insert = "INSERT INTO technologies.login" +
+                "(first_name, last_name, email_id,password,conform_pasword, mobile_number,created_date,modified_date)" +
+                " VALUES(?, ?, ?,?,?,?,CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);";
         PreparedStatement pstmt = null;
         try {
             connection = ConnectionFactory.produce();
@@ -23,7 +25,10 @@ public class UserDaoImpl implements UserDao{
             pstmt.setString(1, user.getFirstname());
             pstmt.setString(2, user.getLastname());
             pstmt.setString(3, user.getEmail());
-            pstmt.setString(3, user.getMobile());
+            pstmt.setString(4, user.getPassword());
+            pstmt.setString(5, user.getConformPassword());
+            pstmt.setString(6, user.getMobile());
+           int  x=  pstmt.executeUpdate();
             return true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -35,4 +40,10 @@ public class UserDaoImpl implements UserDao{
         }
     }
 
+
+    public static void main(String[] args)  throws SQLException  {
+        Connection connection = ConnectionFactory.produce();
+        System.out.println(connection);
+
+    }
 }

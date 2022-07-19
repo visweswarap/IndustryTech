@@ -24,8 +24,7 @@
 
         th, td {
             padding: 8px;
-            background-color: purple;
-            color: #fff;
+            color:purple;
             text-align: center;
         }
 
@@ -42,7 +41,7 @@
     </style>
 </head>
 
-<body style=" background: linear-gradient(130deg, #ffed4b 60%, #20B2AA 60%);">
+<body >
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
     <div>
         <table style="border: 1px solid black; width: 90%;margin-left: 5em; margin-top: 5em">

@@ -32,16 +32,12 @@
     <div style="width: 190px; height: 200px; border: 2px solid; color: pink; margin-left: 5%;margin-top: 5%;">
     </div>
     <div style="width: 600px; height: 50px; border: 2px solid; color: pink; margin-top: -13.5%; margin-left: 18%">
-        <h1 class="header">It Industrial Training</h1>
+        <h1 class="header">It Industry Training</h1>
     </div>
     <div style="width:900px; height: 140px; border: 2px solid; color: pink; margin-top: 0.5%;margin-left: 18% ">
 
     </div>
-    <div style="width:150px; height: 40px; border: 2px solid;color: cornflowerblue; margin-top: -13.5%;margin-left: 90% ">
-        <a href="#" class="button" style="padding: 8px 8px">Login</a>
-        <a href="#" class="button" style="padding:8px 6px">Sign Up</a>
-    </div>
-    <div style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 15%;">
+       <div style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 6%;">
         <h2 class="offer" > Courses Offered </h2>
         <ol>
             <li>C & C++ -Languages</li>

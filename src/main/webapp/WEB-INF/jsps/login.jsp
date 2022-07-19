@@ -20,25 +20,31 @@
      -->
     <div class="signup">
         <h2 class="h2"> Registration</h2>
-        <form id="signupForm" action="/user/signup" class="signupForm">
+        <form id="signupForm" action="/register" class="signupForm">
+            <div style="display: none; color: green;" id="saveSuccess"><p>Saved Successfully</p></div>
+            <div style="display: none; color: green;" id="saveFailed"><p>Save failed! Try again.</p></div>
             <label style="font-size: 17px;">Name:</label>
             <br>
-            <input class="input" type="email" name="email" placeholder="First Name">
-            <input class="input" type="email" name="email" placeholder="Last Name">
+            <input class="input" type="text" name="first_name" placeholder="First Name">
+            <input class="input" type="text" name="last_name" placeholder="Last Name">
             <br>
-            <label style="font-size: 17px;">E Mail :</label>
+            <label style="font-size: 17px;">E-Mail :</label>
             <br>
-            <input class="input" type="email" name="email" placeholder="Enter a Valid Email">
+            <input class="input" type="email" name="email" placeholder="Enter a Valid E-mail">
             <br>
-            <label style="font-size: 17px;">Pass Word :</label>
+            <label style="font-size: 17px;">Password :</label>
             <br>
-            <input class="input" type="password" name="password" placeholder="Enter a Valid Pass Word">
+            <input class="input" type="password" name="password" placeholder="Enter a Valid Password">
+            <br>
+            <label style="font-size: 17px;">Conform Password :</label>
+            <br>
+            <input class="input" type="password" name="conform_password" placeholder="Enter Conform Password ">
             <br>
             <label style="font-size: 17px;">Mobile Number :</label>
             <br>
-            <input class="input" type="password" name="password" placeholder="Enter a Valid Mobile Number">
+            <input class="input" type="text" name="mobile_number" placeholder="Enter a Valid Mobile Number">
             <br> <br>
-            <input type="button" value="Signup" id="createAccount" onclick="signup()" class="button">
+            <input type="button" value="Save" id="createAccount" onclick="saveLogin()" class="button">
         </form>
         <div class="login-Signup" style=" margin-left: 10em; margin-top: -2.5em;">
             <span class="text">Already Member?</span>
@@ -48,11 +54,11 @@
     <div class="login">
         <h2 class="h2"> Login</h2>
         <form action="/user/sign" id="loginForm" class="form--hidden">
-            <label style="font-size: 17px;">E Mail :</label>
+            <label style="font-size: 17px;">E-Mail :</label>
             <br>
             <input class="input" type="email" name="email" placeholder="Enter a Valid Email">
             <br> <br>
-            <label style="font-size: 17px;">Pass Word :</label>
+            <label style="font-size: 17px;">Password :</label>
             <br>
             <input class="input" type="password" name="password" placeholder="Enter a Valid Pass Word">
             <br> <br><br>
@@ -61,7 +67,7 @@
         </form>
         <div class="login-Signup" style=" margin-left: 10em; margin-top: -2.5em;">
             <span class="text">New Member?</span>
-            <button  class="button" onclick="signUp()">Sign Up</button>
+            <button  class="button" onclick="signUp()">Signup</button>
         </div>
     </div>
 </div>
@@ -78,6 +84,24 @@
        {
            document.querySelector(".login").style.cssText ="display: inline-block;";
            document.querySelector(".signup").style.cssText ="display: none;";
+
+       }
+       function saveLogin()
+       {
+           $.ajax({
+               url: "/register",
+               type: "POST",
+               data: $("#signupForm").serialize(),
+               success: function (data, textStatus, jqXHR) {
+                   console.log("Success");
+                   console.log("data");
+                   $("#saveSuccess").show(500);
+               },
+               error: function (jqXHR, textStatus, errorThrown) {
+                   $("#saveFailed").show(500);
+                   console.error("Failure");
+               }
+           });
 
        }
 
