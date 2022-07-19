@@ -20,7 +20,7 @@
      -->
     <div class="signup">
         <h2 class="h2"> Registration</h2>
-        <form id="signupForm" action="/register" class="signupForm">
+        <form id="signupForm" class="signupForm">
             <div style="display: none; color: green;" id="saveSuccess"><p>Saved Successfully</p></div>
             <div style="display: none; color: green;" id="saveFailed"><p>Save failed! Try again.</p></div>
             <label style="font-size: 17px;">Name:</label>
@@ -76,22 +76,22 @@
 
        function signUp()
        {
-          document.querySelector(".login").style.cssText ="display: none;";
-          document.querySelector(".signup").style.cssText ="display: inline-block;";
-
+          $(".login").hide();
+          $(".signup").show();
        }
        function loginForm()
        {
-           document.querySelector(".login").style.cssText ="display: inline-block;";
-           document.querySelector(".signup").style.cssText ="display: none;";
+           $(".login").show();
+           $(".signup").hide();
 
        }
-       function saveLogin()
-       {
+       function saveLogin() {
+           let formData = $("#signupForm").serialize()
+           console.log(formData)
            $.ajax({
-               url: "/register",
+               url: "user/register",
                type: "POST",
-               data: $("#signupForm").serialize(),
+               data: formData,
                success: function (data, textStatus, jqXHR) {
                    console.log("Success");
                    console.log("data");
