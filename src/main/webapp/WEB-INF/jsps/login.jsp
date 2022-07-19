@@ -88,6 +88,8 @@
        function saveLogin() {
            let formData = $("#signupForm").serialize()
            console.log(formData)
+           // Todo: Validate password and confirm password
+
            $.ajax({
                url: "user/register",
                type: "POST",

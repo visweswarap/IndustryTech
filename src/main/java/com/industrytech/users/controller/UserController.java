@@ -48,5 +48,12 @@ public class UserController {
         return "success";
     }
 
-    }
+    // Todo: Change this
+    // login post mapping
+    // read details from database where email and password matches
+    // If there is any record? success
+        // navigate to home page (index.jsp)
+    // if no records or zero records, then wrong
+        // Invalid login details, please try again
+}
 
