@@ -57,7 +57,7 @@
     </div>
     <div class="login">
         <h2 class="h2"> Login</h2>
-        <form id="loginForm" class="form--hidden">
+        <form id="loginForm" class="form-hidden">
             <label style="font-size: 17px;">E-Mail :</label>
             <br>
             <input class="input" type="email" name="email" placeholder="Enter a Valid Email">
@@ -116,7 +116,7 @@
     }
 
     function loginValidation() {
-        let loginForm = $("#form-hidden").serialize()
+        let loginForm = $("#loginForm").serialize()
         console.log(loginForm)
         $.ajax({
             url: "user/login",
@@ -125,6 +125,7 @@
             success: function (data, textStatus, jqXHR) {
                 console.log("Success");
                 console.log("data");
+                window.location = "./home"
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.error("Failure");

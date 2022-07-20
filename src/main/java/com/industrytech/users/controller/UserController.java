@@ -11,6 +11,7 @@ import java.sql.SQLException;
 
 import com.industrytech.database.ConnectionFactory;
 import com.industrytech.users.model.User;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -50,18 +51,15 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    @ResponseBody
-    String loginValidation(ModelMap modelMap, @ModelAttribute User user) throws SQLException {
+    ModelAndView loginValidation(ModelMap modelMap, @ModelAttribute User user) throws SQLException {
 
         modelMap.addAttribute("email", user.getEmail());
-        modelMap.addAttribute("password", user.getPassword());
+        // modelMap.addAttribute("password", user.getPassword());
         boolean isLogin = userDao.loginValidate(user);
         if (isLogin) {
-            return "home";
-        } else {
-            return "login";
-
+            return new ModelAndView("/home", modelMap);
         }
+        return null;
     }
 
 

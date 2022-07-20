@@ -60,15 +60,17 @@ public class UserDaoImpl implements UserDao {
             pstmt = connection.prepareStatement(get);
             pstmt.setString(1,user.getEmail());
             pstmt.setString(2,user.getPassword());
-            pstmt.executeUpdate();
-
+            ResultSet userData = pstmt.executeQuery();
+            //Todo: check if one record exist
+            return true;
         } catch (Exception ignored) {
+            ignored.printStackTrace();
+            return false;
         } finally {
             assert pstmt != null;
             pstmt.close();
             connection.close();
         }
-        return true;
     }
 
 

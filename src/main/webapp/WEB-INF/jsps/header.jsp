@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: vish
@@ -30,7 +31,13 @@
                     </ul>
                 </li>
                 <li><a class="active" style="margin-right: 22em;" href="#">Projects</a></li>
-                <li><a class="active" href="user" style="float: right;">Login</a></li>
+                <li>
+                    <c:if test="${not empty email}">
+                        <a class="active" href="user-details" style="float: right;">${email}</a>
+                    </c:if>
+                    <c:if test="${empty email}"><a class="active" href="user" style="float: right;">Login</a></c:if>
+
+                </li>
                </ul>
         </nav>
     </div>
