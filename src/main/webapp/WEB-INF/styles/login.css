@@ -18,7 +18,7 @@ div.login {
 }
 div.signup {
     background-color: white;
-    width: 40%;
+    width: 30%;
     font-size: 18px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -28,7 +28,7 @@ div.signup {
     margin-top: 1.5em;
     margin-left: 30em;
     display: none;
-    height: 23em;
+    height: 26em;
 }
     .input {
     width: 20em;
