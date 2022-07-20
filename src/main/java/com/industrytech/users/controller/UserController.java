@@ -8,6 +8,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
+
 import com.industrytech.database.ConnectionFactory;
 import com.industrytech.users.model.User;
 
@@ -35,10 +36,10 @@ public class UserController {
         return "login";
 
     }
+
     @PostMapping("/register")
     @ResponseBody
-    String saveUser(ModelMap modelMap, @ModelAttribute User user) throws SQLException
-    {
+    String saveUser(ModelMap modelMap, @ModelAttribute User user) throws SQLException {
         boolean isSaved = userDao.save(user);
         if (isSaved) {
             modelMap.addAttribute("message", "SUCCESS FULLY SAVED");
@@ -48,12 +49,28 @@ public class UserController {
         return "success";
     }
 
+    @PostMapping("/login")
+    @ResponseBody
+    String loginValidation(ModelMap modelMap, @ModelAttribute User user) throws SQLException {
+
+        modelMap.addAttribute("email", user.getEmail());
+        modelMap.addAttribute("password", user.getPassword());
+        boolean isLogin = userDao.loginValidate(user);
+        if (isLogin) {
+            return "home";
+        } else {
+            return "login";
+
+        }
+    }
+
+
     // Todo: Change this
     // login post mapping
     // read details from database where email and password matches
     // If there is any record? success
-        // navigate to home page (index.jsp)
+    // navigate to home page (home.jsp)
     // if no records or zero records, then wrong
-        // Invalid login details, please try again
+    // Invalid login details, please try again
 }
 

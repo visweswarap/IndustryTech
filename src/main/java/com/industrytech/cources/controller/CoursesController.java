@@ -47,7 +47,7 @@ public class CoursesController {
     @GetMapping("/home")
     String courseHome(ModelMap modelMap) {
         modelMap.addAttribute("message", "");
-        return "index";
+        return "home";
     }
 
 }

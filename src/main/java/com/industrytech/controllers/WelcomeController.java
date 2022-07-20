@@ -9,6 +9,6 @@ public class WelcomeController {
 
     @RequestMapping
     String getHomePage(){
-        return "index";
+        return "home";
     }
 }
