@@ -14,5 +14,5 @@ import java.util.List;
 public interface UserDao {
 
     public boolean save(User user) throws SQLException;
-    public boolean loginValidate(User user) throws SQLException;
+    public List<User> loginValidate(User user) throws SQLException;
 }

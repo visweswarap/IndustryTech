@@ -8,6 +8,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import com.industrytech.database.ConnectionFactory;
 import com.industrytech.users.model.User;
@@ -54,12 +55,17 @@ public class UserController {
     ModelAndView loginValidation(ModelMap modelMap, @ModelAttribute User user) throws SQLException {
 
         modelMap.addAttribute("email", user.getEmail());
+        modelMap.addAttribute("errorLogin", "E-MAIL or Password wronly Entered");
         // modelMap.addAttribute("password", user.getPassword());
-        boolean isLogin = userDao.loginValidate(user);
-        if (isLogin) {
-            return new ModelAndView("/home", modelMap);
+        List<User> users = null;
+        users = userDao.loginValidate(user);
+       int size =  users.size();
+        if (size == 1) {
+            return new ModelAndView("home", modelMap);
+        }else {
+            return new ModelAndView("login", modelMap);
+
         }
-        return null;
     }
 
 

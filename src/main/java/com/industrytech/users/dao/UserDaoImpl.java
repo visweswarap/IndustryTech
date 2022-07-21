@@ -51,26 +51,41 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean loginValidate(User user) throws SQLException {
-         Connection connection = null;
+    public List<User> loginValidate(User user) throws SQLException {
+        Connection connection = null;
         PreparedStatement pstmt = null;
         String get = "SELECT * FROM technologies.login WHERE email_id = ? AND password=?;";
         try {
             connection = ConnectionFactory.produce();
             pstmt = connection.prepareStatement(get);
-            pstmt.setString(1,user.getEmail());
-            pstmt.setString(2,user.getPassword());
-            ResultSet userData = pstmt.executeQuery();
+            pstmt.setString(1, user.getEmail());
+            pstmt.setString(2, user.getPassword());
+            ResultSet rs = pstmt.executeQuery();
+            List<User> users = new ArrayList<>();
+            User userData = null;
+            while (rs.next()){
+                userData = new User();
+                userData.setId(rs.getInt("id"));
+                userData.setFirstname(rs.getString("first_name"));
+                userData.setLastname(rs.getString("Last_name"));
+                userData.setEmail(rs.getString("email_id"));
+                userData.setPassword(rs.getString("password"));
+                userData.setMobile(rs.getString("mobile_number"));
+                userData.setCreatedDate(rs.getDate("created_date"));
+                userData.setModifiedDate(rs.getDate("modified_date"));
+                users.add(userData);
+            }
             //Todo: check if one record exist
-            return true;
-        } catch (Exception ignored) {
-            ignored.printStackTrace();
-            return false;
+            return users;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
         } finally {
             assert pstmt != null;
             pstmt.close();
             connection.close();
         }
+
     }
 
 

@@ -59,8 +59,8 @@
                     <td>${c.duration}</td>
                     <td>${c.fee}</td>
                     <td style=>
-                        <input type="button" value="update" >
-                        <input type="button" value="delete">
+                       <input type="button" onclick="updateTable()" value="update" >
+                       <input type="button" onclick="deleteRow()" value="delete">
                     </td>
                 </tr>
 
@@ -74,6 +74,12 @@
 <script>
     function loadAllCourses() {
         window.location = "./all";
+    }
+    function updateTable(){
+
+    }
+    function deleteRow(){
+
     }
 </script>
 

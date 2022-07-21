@@ -30,10 +30,10 @@
                         <li><a href="#">06.00 PM</a></li>
                     </ul>
                 </li>
-                <li><a class="active" style="margin-right: 22em;" href="#">Projects</a></li>
+                <li><a class="active" style="margin-right: 18em;" href="#">Projects</a></li>
                 <li>
                     <c:if test="${not empty email}">
-                        <a class="active" href="user-details" style="float: right;">${email}</a>
+                        <a class="active" href="user-details" >${email}</a>
                     </c:if>
                     <c:if test="${empty email}"><a class="active" href="user" style="float: right;">Login</a></c:if>
 

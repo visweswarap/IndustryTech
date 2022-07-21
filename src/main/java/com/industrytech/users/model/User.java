@@ -14,12 +14,18 @@ public class User {
 
     public User() {
     }
-    public User(String email, String password) {
+
+    public User(int id, String firstname, String lastname, String email, String mobile,
+                String password, Date createdDate, Date modifiedDate) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.email = email;
+        this.mobile = mobile;
         this.password = password;
+        this.createdDate = createdDate;
+        this.modifiedDate = modifiedDate;
     }
-
-
 
     public int getId() {
         return id;
