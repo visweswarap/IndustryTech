@@ -1,18 +1,47 @@
 package com.industrytech.cources.models;
 
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
 
+@Entity
+@Table(name = "technologies.customer")
 public class Course {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private int id;
+
+    /**
+     * id
+     * name
+     * duration
+     * fees
+     * created_date
+     * modified_date
+     * created_by
+     * modified_by
+     */
+    @Column(name="name")
     private String name;
+
+    @Column(name="duration")
     private int duration;
+
+    @Column(name="fees")
     private Double fee;
 
+    @Column(name="created_by")
     private String createdBy;
+
+    @Column(name="modified_by")
     private String modifiedBy;
+
+    @Column(name="created_date")
     private Date createdDate;
+
+    @Column(name="modified_date")
     private Date modifiedDate;
 
     public Course(int id, String name, int duration, Double fee, String createdBy, String modifiedBy, Date createdDate, Date modifiedDate, CourseType type) {
