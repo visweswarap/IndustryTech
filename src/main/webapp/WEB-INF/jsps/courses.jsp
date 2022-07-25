@@ -77,9 +77,11 @@
     }
     function updateTable(){
 
+
     }
     function deleteRow(){
 
+   console.log();
     }
 </script>
 

@@ -61,20 +61,12 @@ public class UserController {
         users = userDao.loginValidate(user);
        int size =  users.size();
         if (size == 1) {
-            return new ModelAndView("home", modelMap);
+            return new ModelAndView("redirect:/home", modelMap);
         }else {
-            return new ModelAndView("login", modelMap);
+            return new ModelAndView("redirect:login", modelMap);
 
         }
     }
 
-
-    // Todo: Change this
-    // login post mapping
-    // read details from database where email and password matches
-    // If there is any record? success
-    // navigate to home page (home.jsp)
-    // if no records or zero records, then wrong
-    // Invalid login details, please try again
-}
+    }
 

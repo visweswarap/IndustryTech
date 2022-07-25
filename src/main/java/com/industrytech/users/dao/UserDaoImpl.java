@@ -3,6 +3,7 @@ package com.industrytech.users.dao;
 import com.industrytech.cources.models.Course;
 import com.industrytech.database.ConnectionFactory;
 import com.industrytech.users.model.User;
+import org.spockframework.runtime.ConfigurationBuilder;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
@@ -74,8 +75,9 @@ public class UserDaoImpl implements UserDao {
                 userData.setCreatedDate(rs.getDate("created_date"));
                 userData.setModifiedDate(rs.getDate("modified_date"));
                 users.add(userData);
+
             }
-            //Todo: check if one record exist
+
             return users;
         } catch (Exception e) {
             e.printStackTrace();

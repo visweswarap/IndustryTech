@@ -63,11 +63,12 @@
 <script>
 
     function saveCourse() {
-
+        let formdata = $("#newCourse").serialize()
+        console.log(formdata)
         $.ajax({
-            url: "./insert",
             type: "POST",
-            data: $("#newCourse").serialize(),
+            url: "courses/insert",
+            data: formdata,
             success: function (data, textStatus, jqXHR) {
                 console.log("Success");
                 console.log("data");

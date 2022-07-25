@@ -63,9 +63,7 @@
             <c:if test="${not empty email}">
                 <a class="loginError" style="color:red">${errorLogin}</a>
             </c:if>
-            <c:if test="${empty email}"><a class="active" style="color: red">${errorLogin}</a></c:if>
-
-            <label style="font-size: 17px;">E-Mail :</label>
+           <label style="font-size: 17px;">E-Mail :</label>
             <br>
             <input class="input" type="email" name="email" placeholder="Enter a Valid Email">
             <br> <br>

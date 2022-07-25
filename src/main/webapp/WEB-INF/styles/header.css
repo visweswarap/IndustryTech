@@ -34,7 +34,7 @@ nav ul li a {
     margin-right: 1em;
 }
 nav ul li a:hover {
-    background: #243342;
+   background: #243342;
 }
 nav ul ul {
     position: absolute;

@@ -73,6 +73,7 @@ public class CourseDaoImpl implements CourseDao {
             if (connection != null)
                 connection.close();
         }
+
     }
 
     public static void main(String[] args) throws SQLException {

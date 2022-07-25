@@ -5,25 +5,14 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
-@Table(name = "technologies.customer")
+@Table(name = "course", schema = "technologies")
 public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private int id;
-
-    /**
-     * id
-     * name
-     * duration
-     * fees
-     * created_date
-     * modified_date
-     * created_by
-     * modified_by
-     */
-    @Column(name="name")
+     @Column(name="name")
     private String name;
 
     @Column(name="duration")
@@ -59,6 +48,8 @@ public class Course {
     public Course() {
 
     }
+    @Transient
+    private CourseType type = CourseType.PROGRAMMING;
 
     public String getCreatedBy() {
         return createdBy;
@@ -96,9 +87,7 @@ public class Course {
         this.fee = fee;
     }
 
-    private CourseType type = CourseType.PROGRAMMING;
-
-    public int getId() {
+       public int getId() {
         return id;
     }
 
