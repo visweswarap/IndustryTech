@@ -45,12 +45,6 @@ public class CoursesController {
         course.setCreatedDate(timestamp);
         course.setModifiedDate(timestamp);
         repository.save(course);
-      /*  boolean isSaved = courseDao.save(course);
-        if (isSaved) {
-            modelMap.addAttribute("message", "SUCCESS");
-        } else {
-            modelMap.addAttribute("message", "FAILED");
-        }*/
         return "success";
     }
 

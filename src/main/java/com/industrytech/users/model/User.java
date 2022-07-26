@@ -1,15 +1,29 @@
 package com.industrytech.users.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+@Entity
+@Table(schema = "technologies", name = "login")
+public class User implements Serializable {
+    @Id
     int id;
+
+    @Column
     String firstname;
+
+    @Column
     String lastname;
+    @Column
     String email;
     String mobile;
     String password;
     Date createdDate;
+
     Date modifiedDate;
 
     public User() {
