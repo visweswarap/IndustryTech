@@ -8,5 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository("courseRepository")
 public interface CourseRepository extends JpaRepository<Course, Integer> {
 
-    boolean findByLogin();
+    default boolean findByLogin() {
+        return false;
+    }
 }

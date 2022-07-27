@@ -13,29 +13,29 @@
     <div class="dropdown">
         <nav>
             <ul>
-                <li><a class="active-header" style="margin-right: 6em; margin-left: 5em" href="${pageContext.request.contextPath}/courses/home" >IT Industry Technologies</a></li>
-                <li><a class="active" style="margin-right: 5em;" href="${pageContext.request.contextPath}/courses">Courses</a>
+                <li ><a class="active-header" href="${pageContext.request.contextPath}/courses/home" >IT Industry Technologies</a></li>
+                <li><a class="active" href="${pageContext.request.contextPath}/courses">Courses</a>
                     <ul>
                         <li><a href="#">C </a></li>
-                        <li><a href="#">C++</a></li>
-                        <li><a href="#">Core Java</a></li>
-                        <li><a href="#">AdvanceJava</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Dev Ops</a></li>
+                        <li><a href="#">Linux</a></li>
                     </ul>
                 </li>
-                <li><a class="active" style="margin-right: 5em;" href="#">Batches</a>
+                <li><a class="active" href="#">Batches</a>
                     <ul>
-                        <li><a href="#">10.00 AM</a></li>
-                        <li><a href="#">11.00 AM</a></li>
-                        <li><a href="#">05.00 PM</a></li>
-                        <li><a href="#">06.00 PM</a></li>
+                        <li><a href="#">Programming</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Internship</a></li>
+                        <li><a href="#">Mentorship</a></li>
                     </ul>
                 </li>
-                <li><a class="active" style="margin-right: 18em;" href="#">Projects</a></li>
-                <li>
+                <li><a class="active" href="#">Projects</a></li>
+                <li style="float:right;">
                     <c:if test="${not empty email}">
                         <a class="active" href="user-details" >${email}</a>
                     </c:if>
-                    <c:if test="${empty email}"><a class="active" href="user" style="float: right;">Login</a></c:if>
+                    <c:if test="${empty email}"><a class="active" href="user" >Login</a></c:if>
 
                 </li>
                </ul>

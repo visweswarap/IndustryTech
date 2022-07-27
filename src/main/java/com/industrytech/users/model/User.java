@@ -1,9 +1,6 @@
 package com.industrytech.users.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -11,19 +8,22 @@ import java.util.Date;
 @Table(schema = "technologies", name = "login")
 public class User implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id" )
     int id;
-
-    @Column
+    @Column(name = "first_name" )
     String firstname;
-
-    @Column
+    @Column(name = "last_name")
     String lastname;
-    @Column
+    @Column(name = "email_id")
     String email;
+    @Column(name = "mobile_number")
     String mobile;
+    @Column(name = "password")
     String password;
+    @Column(name = "created_date")
     Date createdDate;
-
+    @Column(name = "modified_date")
     Date modifiedDate;
 
     public User() {
