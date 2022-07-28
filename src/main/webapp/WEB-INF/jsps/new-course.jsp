@@ -38,7 +38,7 @@
             <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out;">
                 Submit Courses Details</h2>
             <br>
-            <form id="newCourse" action="" style="width: 200px; margin-left: 10%">
+            <form id="newCourse"  class="newCourse" action="" style="width: 200px; margin-left: 10%">
                 <div style="display: none; color: green;" id="saveSuccess"><p>Saved Successfully</p></div>
                 <div style="display: none; color: green;" id="saveFailed"><p>Save failed! Try again.</p></div>
                 <label style="font-size: 17px;">Course Name :</label>
@@ -73,6 +73,8 @@
                 console.log("Success");
                 console.log("data");
                 $("#saveSuccess").show(500);
+                $("#saveSuccess").hide(3000);
+                document.getElementById("newCourse").reset();
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 $("#saveFailed").show(500);

@@ -7,19 +7,23 @@
         ol{
             background:  initial;
             padding: 10px;
-            margin: 2px;
-            margin-top: -30px;
+            list-style: none;
+            counter-reset: steps;
+            margin-top: -18px;
+
         }
         ol li {
             background: #cce5ff;
             color: initial;;
             margin: 8px;
             margin-right:-9px;
+
+
         }
         .offer{
             color: white;
             text-align: center;
-            padding: 5px;
+            padding: 8px;
             background: #1abc9c;
             margin-top: 1px;
         }
@@ -27,7 +31,7 @@
     <jsp:include page="header.jsp" />
     <link rel="stylesheet" type="text/css" href="../styles/header.css">
 </head>
-<body style="background-image: url('./images/collection1.jpg')">
+<body style="background-image: linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);">
 <div>
     <div style="width: 190px; height: 200px; border: 2px solid; color: pink; margin-left: 5%;margin-top: 5%;">
     </div>
@@ -37,7 +41,7 @@
     <div style="width:900px; height: 140px; border: 2px solid; color: pink; margin-top: 0.5%;margin-left: 18% ">
 
     </div>
-       <div style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 6%;">
+       <div class="offered" style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 6%;">
         <h2 class="offer" > Courses Offered </h2>
         <ol>
             <li>C & C++ -Languages</li>

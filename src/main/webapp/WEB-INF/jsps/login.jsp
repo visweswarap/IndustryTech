@@ -13,7 +13,8 @@
 <head>
     <title>Login / Signup</title>
 </head>
-<body>
+<body style="background-image: linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);
+            background-image:-moz-linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);" >
 <div class="main">
 
     <!--
@@ -113,7 +114,9 @@
                 console.log("data");
                 $("#saveSuccess").show(500);
                 $("#saveSuccess").hide(4000);
-            },
+                document.getElementById("signupForm").reset();
+
+                },
             error: function (jqXHR, textStatus, errorThrown) {
                 $("#saveFailed").show(500);
                 $("#saveFailed").hide(4000);

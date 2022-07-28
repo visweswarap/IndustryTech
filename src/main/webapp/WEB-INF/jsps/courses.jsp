@@ -41,7 +41,7 @@
     </style>
 </head>
 
-<body >
+<body style="background-image: linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);">
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
     <div>
         <table style="border: 1px solid black; width: 90%;margin-left: 5em; margin-top: 5em">

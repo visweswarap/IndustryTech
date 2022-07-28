@@ -1,7 +1,5 @@
 package com.industrytech.users.controller;
 
-import com.industrytech.cources.models.Course;
-import com.industrytech.repository.CourseRepository;
 import com.industrytech.repository.UserRepository;
 import com.industrytech.users.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +11,10 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
 
-import com.industrytech.database.ConnectionFactory;
 import com.industrytech.users.model.User;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/user")
@@ -33,17 +29,12 @@ public class UserController {
     UserRepository repository;
 
     @GetMapping("")
-    String getUser(ModelMap modelMap) throws SQLException {
-
-        HttpSession session = request.getSession();
-        User user = new User();
-        user.setEmail("");
-        session.setAttribute("user", user);
-        modelMap.addAttribute("message", "");
-        return "login";
+    String getAllUsers(ModelMap modelMap) throws SQLException {
+        List<User> users = (List<User>) repository.findAll();
+        modelMap.addAttribute("users",users);
+        return "users";
 
     }
-
     @PostMapping("/register")
     @ResponseBody
     String saveUser(ModelMap modelMap, @ModelAttribute User user) throws SQLException {
@@ -56,7 +47,7 @@ public class UserController {
         user.setCreatedDate(new Timestamp(System.currentTimeMillis()));
         user.setModifiedDate(new Timestamp(System.currentTimeMillis()));
        repository.save(user);
-        return "success";
+        return "login";
     }
 
     @PostMapping("/login")
@@ -76,6 +67,12 @@ public class UserController {
         }else {
             return new ModelAndView("redirect:login", modelMap);
         }
+    }
+    @GetMapping("/loginform")
+    String getLogin(ModelMap modelMap) throws SQLException {
+
+        return "login";
+
     }
 
     }
