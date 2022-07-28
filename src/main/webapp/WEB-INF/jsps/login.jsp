@@ -60,7 +60,7 @@
     </div>
     <div class="login">
         <h2 class="h2"> Login</h2>
-        <form id="loginForm" class="formLogin" action="./user/login" method="post">
+        <form id="loginForm" class="formLogin" action="./login/validate" method="post">
             <c:if test="${not empty email}">
                 <a class="loginError" style="color:red">${errorLogin}</a>
             </c:if>

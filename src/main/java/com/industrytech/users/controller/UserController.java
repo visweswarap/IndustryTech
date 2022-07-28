@@ -50,24 +50,6 @@ public class UserController {
         return "login";
     }
 
-    @PostMapping("/login")
-    ModelAndView loginValidation(ModelMap modelMap, @ModelAttribute User user) throws SQLException {
-
-        modelMap.addAttribute("email", user.getEmail());
-        modelMap.addAttribute("errorLogin", "E-MAIL or Password wronly Entered");
-        // modelMap.addAttribute("password", user.getPassword());
-        List<User> users = null;
-        String email = user.getEmail();
-        String password=user.getPassword();
-      User user1 = repository.findByLogin(email,password);
-     //   users = userDao.loginValidate(user);
-
-        if (user1 != null) {
-            return new ModelAndView("redirect:/home", modelMap);
-        }else {
-            return new ModelAndView("redirect:login", modelMap);
-        }
-    }
     @GetMapping("/loginform")
     String getLogin(ModelMap modelMap) throws SQLException {
 

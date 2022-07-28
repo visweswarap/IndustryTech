@@ -33,10 +33,10 @@
                 <li><a class="active" href="#">Projects</a></li>
                 <li><a class="active" href="${pageContext.request.contextPath}/user">Admin</a></li>
                 <li style="float:right;">
-                    <c:if test="${not empty email}">
-                        <a class="active" href="user-details" >${email}</a>
+                    <c:if test="${not empty user}">
+                        <a class="active" href="user-details" >${user.email}</a>
                     </c:if>
-                    <c:if test="${empty email}"><a class="active" href="${pageContext.request.contextPath}/user/loginform" >Login</a></c:if>
+                    <c:if test="${empty user}"><a class="active" href="${pageContext.request.contextPath}/login" >Login</a></c:if>
 
                 </li>
                </ul>
