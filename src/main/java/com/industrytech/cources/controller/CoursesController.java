@@ -25,16 +25,13 @@ public class CoursesController {
 
     @GetMapping("")
     String getAllCourses(ModelMap modelMap) throws SQLException {
-        //List<Course> courses = null;
         List<Course> courses = repository.findAll();
-       // courses = courseDao.getAll();
         modelMap.addAttribute("courses", courses);
         return "courses";
-
     }
-
     @PostMapping("/insert")
-    @ResponseBody String saveCourse(ModelMap modelMap, @ModelAttribute Course course) throws SQLException {
+    @ResponseBody
+    String saveCourse(ModelMap modelMap, @ModelAttribute Course course) throws SQLException {
         System.out.println("Inserting details...");
         course.setType(Course.CourseType.PROGRAMMING);
         course.setId(course.getId());
@@ -51,7 +48,7 @@ public class CoursesController {
     @GetMapping("/delete")
     String deleteCourse(ModelMap modelMap) {
 
-     //   modelMap.addAttribute("courses", courses);
+        //   modelMap.addAttribute("courses", courses);
         return "home";
     }
 

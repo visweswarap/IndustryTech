@@ -13,7 +13,8 @@
     <div class="dropdown">
         <nav>
             <ul>
-                <li><a class="active-header" href="${pageContext.request.contextPath}/courses/home" >IT Industry Technologies</a></li>
+                <li><a class="active-header" href="${pageContext.request.contextPath}/courses/home">IT Industry
+                    Technologies</a></li>
                 <li><a class="active" href="${pageContext.request.contextPath}/courses">Courses</a>
                     <ul>
                         <li><a href="#">C </a></li>
@@ -34,12 +35,12 @@
                 <li><a class="active" href="${pageContext.request.contextPath}/user">Admin</a></li>
                 <li style="float:right;">
                     <c:if test="${not empty user}">
-                        <a class="active" href="user-details" >${user.email}</a>
+                        <a class="active" id="details" href="${pageContext.request.contextPath}/user/details">${user.email}</a>
                     </c:if>
-                    <c:if test="${empty user}"><a class="active" href="${pageContext.request.contextPath}/login" >Login</a></c:if>
-
+                    <c:if test="${empty user}"><a class="active"
+                                                  href="${pageContext.request.contextPath}/login">Login</a></c:if>
                 </li>
-               </ul>
+            </ul>
         </nav>
     </div>
 </div>

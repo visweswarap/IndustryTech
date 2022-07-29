@@ -10,16 +10,22 @@
 <link rel="stylesheet" type="text/css" href="styles/login.css">
 <jsp:include page="header.jsp"/>
 <html>
+<style>
+    .background {
+        background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 75%, rgba(0, 233, 255, 1) 120%);
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <head>
     <title>Login / Signup</title>
 </head>
-<body style="background-image: linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);
-            background-image:-moz-linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);" >
+<body class="background">
 <div class="main">
 
-    <!--
-     New to this site? <button> Signup here </button>
-     -->
     <div class="signup">
         <h2 class="h2"> Registration</h2>
         <form id="signupForm" class="signupForm">
@@ -64,7 +70,7 @@
             <c:if test="${not empty email}">
                 <a class="loginError" style="color:red">${errorLogin}</a>
             </c:if>
-           <label style="font-size: 17px;">E-Mail :</label>
+            <label style="font-size: 17px;">E-Mail :</label>
             <br>
             <input class="input" type="email" name="email" placeholder="Enter a Valid Email">
             <br> <br>
@@ -116,7 +122,7 @@
                 $("#saveSuccess").hide(4000);
                 document.getElementById("signupForm").reset();
 
-                },
+            },
             error: function (jqXHR, textStatus, errorThrown) {
                 $("#saveFailed").show(500);
                 $("#saveFailed").hide(4000);

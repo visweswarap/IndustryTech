@@ -1,16 +1,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
-  User: vish
-  Date: 06/07/22
-  Time: 10:35 AM
+  User: Mahesh
+  Date: 7/28/2022
+  Time: 4:26 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
-    <title>Users</title>
-    <jsp:include page="header.jsp"/>
+    <title>user details</title>
     <style type="text/css">
         table {
             width: 100%;
@@ -36,8 +36,9 @@
             left: 0;
             right: 0;
         }
-        .background{
-            background-image: linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);
+
+        .background {
+            background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 75%, rgba(0, 233, 255, 1) 120%);
             background-repeat: no-repeat;
             margin: 0;
             padding: 0;
@@ -68,6 +69,5 @@
         </c:forEach>
     </table>
 </div>
-
 </body>
 </html>

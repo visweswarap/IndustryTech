@@ -9,5 +9,7 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 
     @Query(value = "SELECT u FROM User u WHERE u.email = :email and u.password = :password")
     User findByLogin(@Param("email") String email, @Param("password") String password);
+    @Query(value = " SELECT u FROM User u WHERE u.email = :email")
+    User findByUser(@Param("email") String email);
 
 }

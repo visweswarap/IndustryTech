@@ -22,7 +22,7 @@
         color: #800080;
         display: inline-block;
         margin-top: 1.5em;
-        margin-left: 6em;
+        margin-left: 1em;
         }
 
     .input {

@@ -19,12 +19,12 @@
             border-collapse: collapse;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin-left: 20%;
+            margin-left: 40%;
         }
 
         th, td {
             padding: 8px;
-            color:purple;
+            color: purple;
             text-align: center;
         }
 
@@ -38,10 +38,20 @@
             left: 0;
             right: 0;
         }
+
+        .background {
+            background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 75%, rgba(0, 233, 255, 1) 120%);
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
     </style>
 </head>
 
-<body style="background-image: linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);">
+<body class="background">
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
     <div>
         <table style="border: 1px solid black; width: 90%;margin-left: 5em; margin-top: 5em">
@@ -59,8 +69,8 @@
                     <td>${c.duration}</td>
                     <td>${c.fee}</td>
                     <td style=>
-                       <input type="button" onclick="updateTable()" value="update" >
-                       <input type="button" onclick="deleteRow()" value="delete">
+                        <input type="button" onclick="updateTable()" value="update">
+                        <input type="button" onclick="deleteRow()" value="delete">
                     </td>
                 </tr>
 
@@ -75,13 +85,15 @@
     function loadAllCourses() {
         window.location = "./all";
     }
-    function updateTable(){
+
+    function updateTable() {
 
 
     }
-    function deleteRow(){
 
-   console.log();
+    function deleteRow() {
+
+        console.log();
     }
 </script>
 

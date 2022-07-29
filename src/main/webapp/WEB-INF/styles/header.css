@@ -1,99 +1,114 @@
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-nav {
-    height: 60px;
-    background: #2c3e50;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 0em;
-}
-nav ul {
-    padding: 5px;
-    margin-right: 50px;
-   }
-nav ul li {
-    background: #2c3e50;
-    position: relative;
-    list-style: none;
-    display: inline-block;
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    nav {
+        height: 60px;
+        background: #2c3e50;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 0em;
+
+    }
+
+    nav ul {
+        padding: 5px;
+        margin-right: 50px;
+    }
+
+    nav ul li {
+        background: #2c3e50;
+        position: relative;
+        list-style: none;
+        display: inline-block;
 
 
-}
-nav ul li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    line-height: 54px;
-    font-size: 18px;
-    margin-right: 1em;
-}
-nav ul li a:hover {
-   background: #2c3e50;
+    }
 
-}
-nav ul ul {
-    position: absolute;
-    top:35px;
-    display: none;
-}
-nav ul li:hover > ul {
-    display: block;
-}
-nav ul ul li {
-    width: 150px;
-    float: left;
-    display: list-item;
-    position: relative;
-    margin-left: 6em;
-}
-nav ul ul li a {
-    text-align:left;
-    padding: 0px 5px;
+    nav ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        line-height: 54px;
+        font-size: 18px;
+        margin-right: 1em;
+    }
 
-}
-.active{
-    margin-left: 6em;
-}
-.button {
-    background-color: white;
-    color: black;
-    border: 2px solid #008CBA;
-    padding: 10px 16px;
-    text-align: center;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 4px;
+    nav ul li a:hover {
+        background: #2c3e50;
 
-}
+    }
 
-.button:hover {
-    background-color: #008CBA;
-    color: white;
-    border-radius: 4px;
-}
+    nav ul ul {
+        position: absolute;
+        top: 35px;
+        display: none;
+    }
 
-.button-green {
-    background-color: white;
-    color: black;
-    border: 2px solid green;
-    padding: 10px 16px;
-    text-align: center;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 4px;
+    nav ul li:hover > ul {
+        display: block;
+    }
 
-}
+    nav ul ul li {
+        width: 150px;
+        float: left;
+        display: list-item;
+        position: relative;
+        margin-left: 6em;
+    }
 
-.button:hover {
-    background-color: green;
-    color: white;
-    border-radius: 4px;
-}
+    nav ul ul li a {
+        text-align: left;
+        padding: 0px 5px;
+
+    }
+
+    .active {
+        margin-left: 6em;
+    }
+
+
+    .button {
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+        padding: 10px 16px;
+        text-align: center;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 4px;
+
+    }
+
+    .button:hover {
+        background-color: #008CBA;
+        color: white;
+        border-radius: 4px;
+    }
+
+    .button-green {
+        background-color: white;
+        color: black;
+        border: 2px solid green;
+        padding: 10px 16px;
+        text-align: center;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 4px;
+
+    }
+
+    .button:hover {
+        background-color: green;
+        color: white;
+        border-radius: 4px;
+    }

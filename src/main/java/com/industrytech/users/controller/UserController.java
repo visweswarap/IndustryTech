@@ -49,11 +49,14 @@ public class UserController {
        repository.save(user);
         return "login";
     }
-
-    @GetMapping("/loginform")
-    String getLogin(ModelMap modelMap) throws SQLException {
-
-        return "login";
+    @GetMapping("/details")
+    String getLoginUser(ModelMap modelMap,@ModelAttribute User user) throws SQLException
+    {
+        List<User> users = null;
+        String email = user.getEmail();
+        User user1 = repository.findByUser(email);
+        modelMap.addAttribute("user",user1);
+        return "userdetails";
 
     }
 

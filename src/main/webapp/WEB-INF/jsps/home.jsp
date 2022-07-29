@@ -27,11 +27,20 @@
             background: #1abc9c;
             margin-top: 1px;
         }
-    </style>
+
+         .background{
+             background-image: linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);
+             background-repeat: no-repeat;
+             margin: 0;
+             padding: 0;
+             width: 100%;
+             height: 100%;
+         }
+     </style>
     <jsp:include page="header.jsp" />
     <link rel="stylesheet" type="text/css" href="../styles/header.css">
 </head>
-<body style="background-image: linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);">
+<body class="background">
 <div>
     <div style="width: 190px; height: 200px; border: 2px solid; color: pink; margin-left: 5%;margin-top: 5%;">
     </div>

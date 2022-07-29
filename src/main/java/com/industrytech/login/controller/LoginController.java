@@ -36,14 +36,15 @@ public class LoginController {
         String email = user.getEmail();
         String password=user.getPassword();
         User user1 = repository.findByLogin(email,password);
-        //   users = userDao.loginValidate(user);
-
-        if (user1 != null) {
+       if (user1 != null) {
             user1.setPassword("");
             request.getSession().setAttribute("user", user1);
             return "redirect:/home";
+
         }else {
             return "redirect:/login";
         }
+
+
     }
 }
