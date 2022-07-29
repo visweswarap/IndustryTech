@@ -1,9 +1,13 @@
 package com.industrytech.cources.controller;
 
+import com.industrytech.admin.MailComponent;
 import com.industrytech.cources.models.Course;
 import com.industrytech.database.dao.CourseDao;
 import com.industrytech.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +26,21 @@ public class CoursesController {
     CourseDao courseDao;
     @Autowired
     CourseRepository repository;
+
+    @Value("${jdbc.user}")
+    String userName;
+
+    @Autowired
+    YamlPropertiesFactoryBean yamlProperties;
+
+//    @Value("${email.configs}")
+//    List<Object> configsData;
+
+    @Autowired
+    Environment env;
+
+//    @Autowired
+//    List<MailComponent.EmailConfig> configs;
 
     @GetMapping("")
     String getAllCourses(ModelMap modelMap) throws SQLException {

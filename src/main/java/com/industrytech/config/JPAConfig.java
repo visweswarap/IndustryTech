@@ -1,11 +1,14 @@
 package com.industrytech.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -76,5 +79,14 @@ public class JPAConfig {
     @Bean
     public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
         return new PersistenceExceptionTranslationPostProcessor();
+    }
+
+    @Bean
+    static PropertySourcesPlaceholderConfigurer properties() {
+        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
+        YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
+        yaml.setResources(new ClassPathResource("mail.yml"));
+        propertySourcesPlaceholderConfigurer.setProperties(yaml.getObject());
+        return propertySourcesPlaceholderConfigurer;
     }
 }

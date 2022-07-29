@@ -1,0 +1,30 @@
+---
+email:
+  configs:
+  - host: mail2.claz.org
+    domains:
+      - gmail
+      - outlook
+    smtpPort: 4025
+    user: test
+    password: password123
+  - host: mail3.claz.org
+    domains:
+      - hotmail
+    smtpPort: 4025
+    user: test
+    password: password123
+  - host: email-smtp.us-east-2.amazonaws.com
+    domains:
+      - xyz
+      - abc
+    smtpPort: 2587
+    user: user
+    password: password
+  - host: mail2.claz.org
+    domains:
+      - other
+    smtpPort: 4025
+    user: test
+    password: passwordASDF
+  abc: wdfsgsd
