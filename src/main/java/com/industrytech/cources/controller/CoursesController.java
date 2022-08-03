@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 @PropertySource("classpath:mail.yml")
@@ -41,7 +43,7 @@ public class CoursesController {
 
     @PostMapping("/insert")
     @ResponseBody
-    String saveCourse(ModelMap modelMap, @ModelAttribute Course course) throws SQLException {
+    Map<String, String> saveCourse(ModelMap modelMap, @ModelAttribute Course course) throws SQLException {
         System.out.println("Inserting details...");
         course.setType(Course.CourseType.PROGRAMMING);
         course.setId(course.getId());
@@ -52,7 +54,9 @@ public class CoursesController {
         course.setCreatedDate(timestamp);
         course.setModifiedDate(timestamp);
         repository.save(course);
-        return "success";
+        Map<String, String> map = new HashMap<>();
+        map.put("message", "success");
+        return map;
     }
 
     @GetMapping("/delete")
