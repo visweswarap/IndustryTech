@@ -1,14 +1,17 @@
 package com.industrytech.cources.controller;
 
-import com.industrytech.admin.EmailConfig;
-import com.industrytech.admin.MailComponent;
+
 import com.industrytech.cources.models.Course;
 import com.industrytech.database.dao.CourseDao;
 import com.industrytech.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -18,11 +21,12 @@ import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
+@Component
+@PropertySource("classpath:mail.yml")
 @Controller
 @RequestMapping("/courses")
 public class CoursesController {
     Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-
     @Autowired
     CourseDao courseDao;
     @Autowired
@@ -34,6 +38,7 @@ public class CoursesController {
         modelMap.addAttribute("courses", courses);
         return "courses";
     }
+
     @PostMapping("/insert")
     @ResponseBody
     String saveCourse(ModelMap modelMap, @ModelAttribute Course course) throws SQLException {

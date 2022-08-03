@@ -37,7 +37,7 @@
             right: 0;
         }
         .background{
-            background-image: linear-gradient(to bottom, rgba(254,254,254,1) 75%, rgba(0,233,255,1) 120%);
+            background-image: linear-gradient(to bottom, rgba(254,254,254,1) 85%, rgba(0,233,255,1) 120%);
             background-repeat: no-repeat;
             margin: 0;
             padding: 0;
@@ -48,7 +48,7 @@
 </head>
 <body class="background">
 <div>
-    <table style="border: 1px solid black; width: 50%;margin-left: 25em; margin-top: 5em">
+    <table style="border: 1px solid black; width: 50%;align:center; margin-top: 5em">
         <tr>
             <th>User Id</th>
             <th>First Name</th>

@@ -7,7 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<jsp:include page="header.jsp"/>
 <html>
 <head>
     <title>user details</title>
@@ -17,28 +17,25 @@
             border-collapse: collapse;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin-left: 20%;
+            margin-left: auto;
+            margin-right: auto;
         }
-
         th, td {
             padding: 8px;
             color: purple;
             text-align: center;
         }
-
         tr:hover {
             background-color: cornflowerblue;
         }
-
         td:hover {
             background-color: cornflowerblue;
             z-index: -1;
             left: 0;
             right: 0;
         }
-
         .background {
-            background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 75%, rgba(0, 233, 255, 1) 120%);
+            background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 85%, rgba(0, 233, 255, 1) 120%);
             background-repeat: no-repeat;
             margin: 0;
             padding: 0;

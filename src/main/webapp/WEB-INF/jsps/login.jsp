@@ -12,7 +12,7 @@
 <html>
 <style>
     .background {
-        background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 75%, rgba(0, 233, 255, 1) 120%);
+        background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 85%, rgba(0, 233, 255, 1) 120%);
         background-repeat: no-repeat;
         margin: 0;
         padding: 0;

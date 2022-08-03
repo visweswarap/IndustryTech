@@ -42,6 +42,9 @@ public class LoginController {
             return "redirect:/home";
 
         }else {
+          request.setAttribute("email",user.getEmail());
+          request.setAttribute("errorLogin","E-MAIL or Password wronly Entered");
+
             return "redirect:/login";
         }
 

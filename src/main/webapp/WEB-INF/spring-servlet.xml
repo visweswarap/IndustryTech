@@ -11,9 +11,9 @@
 
     <context:component-scan base-package="com.industrytech" />
     <mvc:annotation-driven />
-
+    <context:annotation-config/>
     <beans:bean id="yamlProperties" class="org.springframework.beans.factory.config.YamlPropertiesFactoryBean">
-        <beans:property name="resources" value="classpath:mail.yml"/>
+                <beans:property name="resources" value="classpath:mail.yml"/>
     </beans:bean>
 
     <context:property-placeholder properties-ref="yamlProperties"/>
