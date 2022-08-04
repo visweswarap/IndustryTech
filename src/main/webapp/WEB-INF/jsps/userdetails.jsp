@@ -10,7 +10,8 @@
 <jsp:include page="header.jsp"/>
 <html>
 <head>
-    <title>user details</title>
+    <link rel="icon" href="./images/logofinalC.jfif" type="image/icon type">
+    <title>All-Users</title>
     <style type="text/css">
         table {
             width: 100%;

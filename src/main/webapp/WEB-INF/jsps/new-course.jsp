@@ -35,7 +35,7 @@
 <div>
     <div class="main">
         <div class="register">
-            <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out;">
+            <h2 style="text-align: center;text-shadow: -15px 10px 10px #ced0d3;transition: all 0.25s ease-out; margin-top: 10px">
                 Submit Courses Details</h2>
             <br>
             <form id="newCourse"  class="newCourse" action="" style="width: 200px; margin-left: 10%">

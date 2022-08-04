@@ -9,7 +9,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Users</title>
+    <link rel="icon" href="./images/logofinalC.jfif" type="image/icon type">
+    <title>Admin-Users</title>
     <jsp:include page="header.jsp"/>
     <style type="text/css">
         table {

@@ -21,6 +21,7 @@
     nav ul {
         padding: 5px;
         margin-right: 50px;
+        margin-left: 20px;
     }
 
     nav ul li {
@@ -61,7 +62,7 @@
         float: left;
         display: list-item;
         position: relative;
-        margin-left: 6em;
+        margin-left: 5em;
     }
 
     nav ul ul li a {

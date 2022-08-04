@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <link rel="icon" href="./images/logofinalC.jfif" type="image/icon type">
+    <title>Industry Technology</title>
     <style>
         ol{
             background:  initial;
@@ -42,18 +43,19 @@
 </head>
 <body class="background">
 <div>
-    <div style="width: 190px; height: 200px; border: 2px solid; color: pink; margin-left: 5%;margin-top: 5%;">
+    <div  style="width: 190px; height: 200px; border: 2px solid;color: white; margin-left: 5%;margin-top: 5%;">
+        <img src="./images/logofinalC.jfif" width="100%" height="100%">
     </div>
-    <div style="width: 600px; height: 50px; border: 2px solid; color: pink; margin-top: -13.5%; margin-left: 18%">
-        <h1 class="header">It Industry Training</h1>
+    <div style="width: 600px; height: 50px; border: 2px solid; color: white; margin-top: -13.0%; margin-left: 18%">
+        <img src="./images/technology.jfif" width="100%" height="100%">
     </div>
-    <div style="width:900px; height: 140px; border: 2px solid; color: pink; margin-top: 0.5%;margin-left: 18% ">
+    <div style="width:900px; height: 135px; border: 2px solid; color: pink; margin-top: 0.5%;margin-left: 18% ">
 
     </div>
        <div class="offered" style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 6%;">
         <h2 class="offer" > Courses Offered </h2>
         <ol>
-            <li>C & C++ -Languages</li>
+            <li><i class='fas fa-at'></i>C & C++ -Languages</li>
             <li>Core-Java</li>
             <li>Advanced-Java</li>
             <li>Servlets</li>

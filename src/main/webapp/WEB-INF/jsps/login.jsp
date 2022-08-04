@@ -21,7 +21,8 @@
     }
 </style>
 <head>
-    <title>Login / Signup</title>
+    <link rel="icon" href="./images/logofinalC.jfif" type="image/icon type">
+    <title>Industry Technology</title>
 </head>
 <body class="background">
 <div class="main">

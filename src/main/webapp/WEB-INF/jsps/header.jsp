@@ -10,10 +10,12 @@
 
 <link rel="stylesheet" type="text/css" href="styles/header.css">
 <div class="header">
-    <div class="dropdown">
+    <div class="dropdown" style="display: grid">
         <nav>
+
             <ul>
-                <li><a class="active-header" style="margin-left: 50px;" href="${pageContext.request.contextPath}/courses/home">IT Industry
+                <li><a class="active-header" style="margin-left: 75px;"
+                       href="${pageContext.request.contextPath}/courses/home">IT Industry
                     Technologies</a></li>
                 <li><a class="active" href="${pageContext.request.contextPath}/courses">Courses</a>
                     <ul>
@@ -35,7 +37,8 @@
                 <li><a class="active" href="${pageContext.request.contextPath}/user">Admin</a></li>
                 <li style="float:right;">
                     <c:if test="${not empty user}">
-                        <a class="active" id="details" href="${pageContext.request.contextPath}/user/details">${user.email}</a>
+                        <a class="active" id="details"
+                           href="${pageContext.request.contextPath}/user/details">${user.email}</a>
                     </c:if>
                     <c:if test="${empty user}"><a class="active"
                                                   href="${pageContext.request.contextPath}/login">Login</a></c:if>

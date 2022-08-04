@@ -11,7 +11,8 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <link rel="icon" href="./images/logofinalC.jfif" type="image/icon type">
+    <title>All-Courses</title>
     <jsp:include page="header.jsp"/>
     <style type="text/css">
         table {
@@ -87,7 +88,7 @@
     }
 
     function updateTable() {
-
+      let id =  ${c.id}
 
     }
 
