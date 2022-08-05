@@ -1,27 +1,30 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html style="height: 100%">
+
 <head>
     <link rel="icon" href="./images/logofinalC.jfif" type="image/icon type">
     <title>Industry Technology</title>
     <style>
-        ol{
-            background:  initial;
+        ol {
+            background: initial;
             padding: 10px;
             list-style: none;
             counter-reset: steps;
             margin-top: -18px;
 
         }
+
         ol li {
             background: #cce5ff;
             color: initial;;
             margin: 8px;
-            margin-right:-9px;
+            margin-right: -9px;
 
 
         }
-        .offer{
+
+        .offer {
             color: white;
             text-align: center;
             padding: 8px;
@@ -29,31 +32,33 @@
             margin-top: 1px;
         }
 
-         .background{
-             background-image: linear-gradient(to bottom, rgba(254,254,254,1) 85%, rgba(0,233,255,1) 110%);
-             background-repeat: no-repeat;
-             margin: 0;
-             padding: 0;
-             width: 100%;
-             height: 100%;
-         }
-     </style>
-    <jsp:include page="header.jsp" />
+        .background {
+            background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 85%, rgba(0, 233, 255, 1) 110%);
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <jsp:include page="header.jsp"/>
     <link rel="stylesheet" type="text/css" href="../styles/header.css">
 </head>
+
 <body class="background">
 <div>
-    <div  style="width: 190px; height: 200px; border: 2px solid;color: white; margin-left: 5%;margin-top: 5%;">
+    <div style="width: 190px; height: 200px; border: 2px solid;color: white; margin-left: 5%;margin-top: 5%;">
         <img src="./images/logofinalC.jfif" width="100%" height="100%">
     </div>
     <div style="width: 600px; height: 50px; border: 2px solid; color: white; margin-top: -13.0%; margin-left: 18%">
-        <img src="./images/technology.jfif" width="100%" height="100%">
+        <img src="./images/technology.jfif" width="400px" height="100%">
     </div>
     <div style="width:900px; height: 135px; border: 2px solid; color: pink; margin-top: 0.5%;margin-left: 18% ">
 
     </div>
-       <div class="offered" style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 6%;">
-        <h2 class="offer" > Courses Offered </h2>
+    <div class="offered"
+         style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 4%;">
+        <h2 class="offer"> Courses Offered </h2>
         <ol>
             <li><i class='fas fa-at'></i>C & C++ -Languages</li>
             <li>Core-Java</li>
@@ -66,7 +71,7 @@
             <li>Live Project-Training</li>
         </ol>
     </div>
-    <div style="width: 800px; height: 300px; border: 2px solid; color: pink; margin-left: 40%;margin-top: -20.15%;">
+    <div style="width: 800px; height: 300px; border: 2px solid; color: pink; margin-left: 40%;margin-top: -19.50%;">
         <div style="width:120px; height: 120px; border: 2px solid; color: pink; margin-top: 3%;margin-left: 1%;">
             <img src="./images/vish.webp" width="100%">
         </div>
