@@ -12,12 +12,11 @@ import java.sql.Timestamp;
 import java.util.List;
 
 import com.industrytech.users.model.User;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/admin")
 public class UserController {
 
     @Autowired
@@ -31,10 +30,11 @@ public class UserController {
     @GetMapping("")
     String getAllUsers(ModelMap modelMap) throws SQLException {
         List<User> users = (List<User>) repository.findAll();
-        modelMap.addAttribute("users",users);
-        return "users";
-
+        modelMap.addAttribute("users", users);
+        User user = (User) request.getSession().getAttribute("user");
+          return "admin";
     }
+
     @PostMapping("/register")
     @ResponseBody
     String saveUser(ModelMap modelMap, @ModelAttribute User user) throws SQLException {
@@ -46,19 +46,19 @@ public class UserController {
         user.setPassword(user.getPassword());
         user.setCreatedDate(new Timestamp(System.currentTimeMillis()));
         user.setModifiedDate(new Timestamp(System.currentTimeMillis()));
-       repository.save(user);
+        repository.save(user);
         return "login";
     }
+
     @GetMapping("/details")
-    String getLoginUser(ModelMap modelMap,@ModelAttribute User user) throws SQLException
-    {
+    String getLoginUser(ModelMap modelMap, @ModelAttribute User user) throws SQLException {
         List<User> users = null;
         String email = user.getEmail();
         User user1 = repository.findByUser(email);
-        modelMap.addAttribute("user",user1);
+        modelMap.addAttribute("user", user1);
         return "userdetails";
 
     }
 
-    }
+}
 

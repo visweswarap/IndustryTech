@@ -33,7 +33,7 @@
         }
 
         .background {
-            background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 85%, rgba(0, 233, 255, 1) 110%);
+            background-image: linear-gradient(to bottom, rgba(254, 254, 254, 1) 90%, rgba(0, 233, 255, 1) 110%);
             background-repeat: no-repeat;
             margin: 0;
             padding: 0;
@@ -47,17 +47,17 @@
 
 <body class="background">
 <div>
-    <div style="width: 190px; height: 200px; border: 2px solid;color: white; margin-left: 5%;margin-top: 5%;">
+    <div style="width: 190px; height: 200px;border: none; margin-left: 5%;margin-top: 5%;">
         <img src="./images/logofinalC.jfif" width="100%" height="100%">
     </div>
-    <div style="width: 600px; height: 50px; border: 2px solid; color: white; margin-top: -13.0%; margin-left: 18%">
+    <div style="width: 600px; height: 50px; border: none; margin-top: -13.0%; margin-left: 18%">
         <img src="./images/technology.jfif" width="400px" height="100%">
     </div>
     <div style="width:900px; height: 135px; border: 2px solid; color: pink; margin-top: 0.5%;margin-left: 18% ">
 
     </div>
     <div class="offered"
-         style="width: 500px; height: 300px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 4%;">
+         style="width: 500px; height: 295px; border: 2px solid; color: cornflowerblue; margin-left: 5%;margin-top: 2%;">
         <h2 class="offer"> Courses Offered </h2>
         <ol>
             <li><i class='fas fa-at'></i>C & C++ -Languages</li>
@@ -71,8 +71,8 @@
             <li>Live Project-Training</li>
         </ol>
     </div>
-    <div style="width: 800px; height: 300px; border: 2px solid; color: pink; margin-left: 40%;margin-top: -19.50%;">
-        <div style="width:120px; height: 120px; border: 2px solid; color: pink; margin-top: 3%;margin-left: 1%;">
+    <div style="width: 800px; height: 295px; border: 2px solid; color: pink; margin-left: 40%;margin-top: -19.5%;">
+        <div style="width:120px; height: 120px; border: none; margin-top: 3%;margin-left: 1%;">
             <img src="./images/vish.webp" width="100%">
         </div>
         <div style="width:120px; height: 120px; border: 2px solid; color: pink; margin-top: 1.5%;margin-left: 1% ">
