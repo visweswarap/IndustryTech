@@ -31,7 +31,7 @@ public class UserController {
     String getAllUsers(ModelMap modelMap) throws SQLException {
         List<User> users = (List<User>) repository.findAll();
         modelMap.addAttribute("users", users);
-        User user = (User) request.getSession().getAttribute("user");
+      //  boolean is = (boolean) request.getSession().getAttribute("users");
           return "admin";
     }
 

@@ -70,8 +70,8 @@
                     <td>${c.duration}</td>
                     <td>${c.fee}</td>
                     <td style=>
-                        <input type="button" onclick="updateTable()" value="update">
-                        <input type="button" onclick="deleteRow()" value="delete">
+                        <input type="button" onclick="updateTable()"  value="update">
+                        <input type="button" onclick="deleteRow()" id="delete" value="delete">
                     </td>
                 </tr>
 
@@ -86,15 +86,12 @@
     function loadAllCourses() {
         window.location = "./all";
     }
-
     function updateTable() {
       let id =  ${c.id}
-
     }
-
     function deleteRow() {
-
-        console.log();
+      let id =  &(document).getElementById("delete").val();
+        console.log(id);
     }
 </script>
 

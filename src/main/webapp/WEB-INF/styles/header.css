@@ -14,6 +14,10 @@ nav {
     background: #2c3e50;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     margin-top: 0em;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    min-width: 1550px;
 
 }
 
