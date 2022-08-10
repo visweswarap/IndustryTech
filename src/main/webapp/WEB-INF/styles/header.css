@@ -37,7 +37,7 @@ nav ul li {
 }
 
 nav ul li a {
-    display: block;
+    display: table;
     color: white;
     text-decoration: none;
     line-height: 54px;
@@ -65,18 +65,18 @@ nav ul ul li {
     float: left;
     display: list-item;
     position: relative;
-    margin-left: 5em;
+    margin-left: 3em;
 }
 
 nav ul ul li a {
     text-align: left;
     padding: 0px 5px;
-    line-height: 45px;
+    line-height: 50px;
 
 }
 
 .active {
-    margin-left: 6em;
+    margin-left: 4em;
 }
 #admin{
     display: none;

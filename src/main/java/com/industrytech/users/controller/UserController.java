@@ -29,9 +29,13 @@ public class UserController {
 
     @GetMapping("")
     String getAllUsers(ModelMap modelMap) throws SQLException {
+        User user = (User) request.getSession().getAttribute("user");
+        if(user == null){
+            return "login";
+        }
         List<User> users = (List<User>) repository.findAll();
         modelMap.addAttribute("users", users);
-      //  boolean is = (boolean) request.getSession().getAttribute("users");
+
           return "admin";
     }
 

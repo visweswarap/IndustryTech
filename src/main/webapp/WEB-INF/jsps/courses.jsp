@@ -15,15 +15,25 @@
     <title>All-Courses</title>
     <jsp:include page="header.jsp"/>
     <style type="text/css">
+        .table-head{
+            background-color: darkgrey;
+
+        }
         table {
             width: 100%;
             border-collapse: collapse;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             margin-left: 40%;
+            border-radius: 10px
         }
 
-        th, td {
+        th {
+            padding: 8px;
+            color: whitesmoke;
+            text-align: center;
+        }
+        td {
             padding: 8px;
             color: purple;
             text-align: center;
@@ -55,8 +65,8 @@
 <body class="background">
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
     <div>
-        <table style="border: 1px solid black; width: 90%;margin-left: 5em; margin-top: 5em">
-            <tr>
+        <table style="border: 1px solid black; width: 90%;margin-left: 5em; margin-top: 5em;">
+            <tr class="table-head" >
                 <th>Course ID</th>
                 <th>Name</th>
                 <th>Duration</th>
@@ -69,9 +79,10 @@
                     <td>${c.name}</td>
                     <td>${c.duration}</td>
                     <td>${c.fee}</td>
-                    <td style=>
+
+                    <td >
                         <input type="button" onclick="updateTable()"  value="update">
-                        <input type="button" onclick="deleteRow()" id="delete" value="delete">
+                        <input type="button" class="btndelete"  id="delete" value="delete">
                     </td>
                 </tr>
 
@@ -89,11 +100,10 @@
     function updateTable() {
       let id =  ${c.id}
     }
-    function deleteRow() {
-      let id =  &(document).getElementById("delete").val();
-        console.log(id);
-    }
-</script>
+    $("#delete").on('click', '.btnDelete', function () {
+        $(this).closest('tr').remove();
+    });
+   </script>
 
 </body>
 </html>

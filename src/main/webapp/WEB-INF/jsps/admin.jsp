@@ -13,17 +13,27 @@
     <title>Admin-Users</title>
     <jsp:include page="header.jsp"/>
     <style type="text/css">
+        .table-head{
+            background-color: darkgrey;
+            color: white;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             margin-left: 20%;
+            border-radius: 10px
         }
 
-        th, td {
+       td {
             padding: 8px;
             color: purple;
+            text-align: center;
+        }
+        th{
+            padding: 8px;
+            color: whitesmoke;
             text-align: center;
         }
 
@@ -50,7 +60,7 @@
 <body class="background">
 <div>
     <table style="border: 1px solid black; width: 50%;align:center; margin-top: 5em">
-        <tr>
+        <tr class="table-head">
             <th>User Id</th>
             <th>First Name</th>
             <th>Last Name</th>
