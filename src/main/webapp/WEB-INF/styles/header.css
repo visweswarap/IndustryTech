@@ -17,14 +17,14 @@ nav {
     margin-right: auto;
     margin-left: auto;
     max-width: 100%;
-    min-width: 1550px;
+    min-width: 1500px;
 
 }
 
 nav ul {
     padding: 5px;
     margin-right: 50px;
-    margin-left: 20px;
+    margin-left: 70px;
 }
 
 nav ul li {
@@ -65,7 +65,7 @@ nav ul ul li {
     float: left;
     display: list-item;
     position: relative;
-    margin-left: 3em;
+    margin-left: 0em;
 }
 
 nav ul ul li a {
