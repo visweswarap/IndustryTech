@@ -43,7 +43,7 @@
             <li style="float:right;">
                 <c:if test="${not empty user}">
                     <a class="active" id="details"
-                       href="${pageContext.request.contextPath}/user/details">${user.email}</a>
+                       href="${pageContext.request.contextPath}/details">${user.email}</a>
                 </c:if>
                 <c:if test="${empty user}"><a class="active"
                                               href="${pageContext.request.contextPath}/login">Login</a></c:if>

@@ -1,9 +1,11 @@
 package com.industrytech.cources.controller;
 
 
+import com.industrytech.controllers.WelcomeController;
 import com.industrytech.cources.models.Course;
 import com.industrytech.database.dao.CourseDao;
 import com.industrytech.repository.CourseRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
@@ -28,6 +30,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/courses")
 public class CoursesController {
+    private static final Logger logger = Logger.getLogger(CoursesController.class);
     Timestamp timestamp = new Timestamp(System.currentTimeMillis());
     @Autowired
     CourseDao courseDao;
@@ -38,6 +41,7 @@ public class CoursesController {
     String getAllCourses(ModelMap modelMap) throws SQLException {
         List<Course> courses = repository.findAll();
         modelMap.addAttribute("courses", courses);
+        logger.info("Get All Courses Details");
         return "courses";
     }
 
@@ -56,12 +60,13 @@ public class CoursesController {
         repository.save(course);
         Map<String, String> map = new HashMap<>();
         map.put("message", "success");
+        logger.info("Save Courses Details");
         return map;
     }
 
     @GetMapping("/delete")
     String deleteCourse(ModelMap modelMap) {
-
+        logger.info("Delete Courses Details");
         //   modelMap.addAttribute("courses", courses);
         return "home";
     }
