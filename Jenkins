@@ -18,9 +18,4 @@ pipeline {
             }
         }
     }
-    post{
-        always{
-          emailext body: 'pipeline status', subject: 'pipeline status', to: 'mahesh.vonteru@gmail.com'  
-        }
-    }
-}
+   }
