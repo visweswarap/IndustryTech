@@ -8,7 +8,7 @@ pipeline {
     stage ('Build') {
       steps {
         github 'https://github.com/visweswarap/IndustryTech.git'
-        bat "mvn clean package"
+        sh "mvn clean package"
       }
     }
     }
