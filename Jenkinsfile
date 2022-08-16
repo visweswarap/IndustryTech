@@ -6,6 +6,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
+        git 'https://github.com/visweswarap/IndustryTech.git'
         sh 'mvn clean package'
       }
     }
