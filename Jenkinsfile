@@ -15,7 +15,7 @@ pipeline {
          stage("Clone code from VCS") {
              steps {
                  script {
-                     git 'https://github.com/visweswarap/IndustryTech.git';
+                     github 'https://github.com/visweswarap/IndustryTech.git';
                  }
              }
          }
