@@ -24,7 +24,7 @@ pipeline {
              nexusUrl: 'localhost:8081',
              nexusVersion: 'nexus3',
              protocol: 'http',
-             repository: 'nexus_Tech',
+             repository: 'nexus_Tech/',
              version: '1.0-SNAPSHOT'
            }
         }
