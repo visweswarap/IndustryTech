@@ -15,7 +15,7 @@ pipeline {
              nexusArtifactUploader artifacts: [
                     [artifactId: 'IndustryTech',
                      classifier: '',
-                     file: 'target/IndustryTech/1.0-SNAPSHOT.war',
+                     file: 'target/IndustryTech-1.0-SNAPSHOT.war',
                      type: 'war'
                      ]
              ],
