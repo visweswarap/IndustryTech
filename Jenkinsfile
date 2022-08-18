@@ -6,10 +6,8 @@ pipeline {
      stages {
          stage("Maven Build") {
              steps {
-                 script {
-                     github 'https://github.com/visweswarap/IndustryTech.git';
-                     bat "mvn clan package"
-                         }
+                     github 'https://github.com/visweswarap/IndustryTech.git'
+                     bat "mvn clean package"
                     }
                  }
           stage("Up Load War Nexus") {
