@@ -19,7 +19,7 @@ pipeline {
                      type: 'war'
                      ]
              ],
-             credentialsId: 'nexus3',
+             credentialsId: 'nexus-Tech',
              groupId: 'com.application',
              nexusUrl: 'localhost:8081',
              nexusVersion: 'nexus3',
