@@ -9,6 +9,18 @@
     <version>1.0-SNAPSHOT</version>
     <name>IndustryTech</name>
     <packaging>war</packaging>
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Releases</name>
+            <url>http://localHost:8081/repository/nexus_Tech/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Snapshots</name>
+            <url>http://localHost:8081/repository/nexus_Tech/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
